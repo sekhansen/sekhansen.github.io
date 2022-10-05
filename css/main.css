@@ -2,8 +2,32 @@ body {
     margin: 60px auto;
     width: 70%;
 }
+
+/* ----------------------------------- */
+/* layout of Home page */
+/* ----------------------------------- */
+.column {
+    float: left;
+  }
+  
+  .left {
+    width: 38%;
+  }
+  
+  .right {
+    width: 62%;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* ----------------------------------- */
+/* Headings, fonts and buttons */
+/* ----------------------------------- */
 nav ul, footer ul {
-    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0px;
     list-style: none;
@@ -22,13 +46,13 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2.8em;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
-h3 {
+h2, h3 {
     font-size: 1.45em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:#333;
@@ -51,7 +75,7 @@ p {
 }
 
 span {
-    font-size: 0.95em;
+    font-size: 0.8em;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.25em;
     color: #333;
@@ -84,8 +108,20 @@ ul.posts li {
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-.green-button {
+.blue-button {
     background-color:#715AFF;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .gray-button {
+    background-color:#5F7470;
     border: none;
     color: white;
     padding: 6px 10px;
