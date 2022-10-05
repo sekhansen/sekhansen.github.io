@@ -3,7 +3,8 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -14,20 +15,49 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    /* color: #999; */
+    color:#C1292E;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.25em;
-    line-height: 1.1em;
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
+
+h3 {
+    font-size: 1.45em;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#333;
+}
+
+h5 {
+    font-size: 1.25em;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #999;
+    font-weight:normal;
+    line-height: 0px;
+    margin-bottom:-5px;
+}
+
+p {
+    font-size: 1.25em;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.25em;
+    color: #333;
+}
+
+span {
+    font-size: 0.95em;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.25em;
+    color: #333;
+    /* padding-left: 200px; */
+}
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -41,3 +71,27 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+.red-button {
+    background-color:#C1292E;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+.green-button {
+    background-color:#715AFF;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
