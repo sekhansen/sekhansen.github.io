@@ -6,15 +6,16 @@ body {
 /* ----------------------------------- */
 /* layout of Home page */
 /* ----------------------------------- */
+
 .column {
     float: left;
   }
   
-  .left {
+.left {
     width: 38%;
   }
   
-  .right {
+.right {
     width: 62%;
   }
 
@@ -120,7 +121,7 @@ ul.posts li {
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  .gray-button {
+.gray-button {
     background-color:#5F7470;
     border: none;
     color: white;
