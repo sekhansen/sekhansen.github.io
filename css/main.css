@@ -141,6 +141,18 @@ ul.posts li {
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
+  .green-button {
+    background-color:#2cdf2f;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
 /* .container {
     display: flex;
   } */
