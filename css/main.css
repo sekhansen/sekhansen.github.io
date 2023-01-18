@@ -119,7 +119,7 @@ ul.posts li {
 
 .blue-button {
     background-color:#715AFF;
-    border: none;
+    border: none; 
     color: white;
     padding: 6px 10px;
     text-align: center;
@@ -130,7 +130,8 @@ ul.posts li {
   }
 
 .gray-button {
-    background-color:#5F7470;
+    /* background-color:#5F7470; */
+    background-color:#2B303A;
     border: none;
     color: white;
     padding: 6px 10px;
@@ -142,7 +143,7 @@ ul.posts li {
   }
 
   .green-button {
-    background-color:#2cdf2f;
+    background-color:#8CBA80;
     border: none;
     color: white;
     padding: 6px 10px;
@@ -152,6 +153,10 @@ ul.posts li {
     font-size: 14px;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+
+/* span {
+    outline: 2px solid black;
+} */
 
 /* .container {
     display: flex;
