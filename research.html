@@ -3,48 +3,18 @@ layout: default
 title: Stephen Hansen - Research
 ---
 
-<!-- Hide expanded content before any click -->
-<style>
-  #p1_more {display: none;}
-  #p2_more {display: none;}
-  #p3_more {display: none;}
-  #p4_more {display: none;}
-  #p5_more {display: none;}
-  #p6_more {display: none;}
-  #p7_more {display: none;}
-  #p8_more {display: none;}
-  #p9_more {display: none;}
-  #p10_more {display: none;}
-  #p11_more {display: none;}
-  #p12_more {display: none;}
-  #p13_more {display: none;}
-  #p14_more {display: none;}
-  #p15_more {display: none;}
-  #p16_more {display: none;}
-  #p17_more {display: none;}
-  #p18_more {display: none;}
-  #p19_more {display: none;}
-  #as_1_more {display: none;}
-  
-</style>
-
 <!-- define JavaScript function to expand content of papers -->
 <script>
-  function myFunction(dots_id, more_id) {
-  var dots = document.getElementById(dots_id);
-  var moreText = document.getElementById(more_id);
-  // var btnText = document.getElementById("myBtn");
-  if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      // btnText.innerHTML = "Show abstract"; 
-      moreText.style.display = "none";
-  } else {
-      dots.style.display = "none";
-      // btnText.innerHTML = "Hide abstract"; 
-      moreText.style.display = "inline";
+  function myFunction(more_id) {
+      var moreText = document.getElementById(more_id);
+      if (moreText.style.display === "none") {
+          moreText.style.display = "block";
+      } 
+      else {
+          moreText.style.display = "none";
+      }
   }
-  }
-  </script>
+</script>
 
 <head>
   <title>{{ page.title }}</title>
@@ -64,98 +34,86 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="monetary_policy">Monetary Policy / Central Bank Design </h2>
 
-<div id="paper1" onclick="myFunction('p1_dots', 'p1_more')">
+<div id="paper1">
   <h5> Policymakers' Uncertainty </h5>
   <p>
       (with Anna Cieslak, Michael McMahon, and Song Xiao)
       <br><i>Working paper</i><br>
-      <span id="p1_dots"></span>
-      <span id="p1_more"><br>
+      <button class="gray-button" onclick="myFunction('p1_more')">Summary</button>
+      <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <span id="p1_more" style="display: none;"><br>
           We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. 
-          <br><br>
-          <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Working Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper2" onclick="myFunction('p2_dots', 'p2_more')">
+<div id="paper2">
   <h5> The Long-Run Information Effect of Central Bank Communication </h5>
   <p>
     (with Michael McMahon and Matthew Tong)
       <br><i>Journal of Monetary Economics (2019) 108 (December): 185-202.</i><br>
-      <span id="p2_dots"></span>
-      <span id="p2_more"><br>
+      <button class="gray-button" onclick="myFunction('p2_more')">Summary</button>
+      <a href="./pdf_files/jme_2019.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p2_more" style="display: none;"><br>
         When central banks communicate signals on uncertainty in economic conditions, they can have their largest impact on long-run yields.  This novel form of information effect explains the market reaction to the Bank of England's Inflation Report very well.
-        <br><br>
-          <a href="./pdf_files/jme_2019.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper3" onclick="myFunction('p3_dots', 'p3_more')">
+<div id="paper3">
   <h5> Transparency and Deliberation within the FOMC: a Computational Linguistics Approach </h5>
   <p>
     (with Michael McMahon and Andrea Prat)
       <br><i>Quarterly Journal of Economics (2018) 133 (2): 801-870</i><br>
-      <span id="p3_dots"></span>
-      <span id="p3_more"><br>
-        When central banks communicate signals on uncertainty in economic conditions, they can have their largest impact on long-run yields.  This novel form of information effect explains the market reaction to the Bank of England's Inflation Report very well.
-        <br><br>
-          <a href="./pdf_files/qje_2018.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
+      <button class="gray-button" onclick="myFunction('p3_more')">Summary</button>
+      <a href="./pdf_files/qje_2018.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p3_more" style="display: none;"><br>
+      Using communication measures from machine learning, we find evidence for both the conformity and discipline effects predicted by the career concerns literature following an increase in transparency on the Federal Open Market Committee.  On balance, the discipline effect appears stronger, as rookie members become more influential.
       </span>
   </p>
 </div>
 
-<div id="paper4" onclick="myFunction('p4_dots', 'p4_more')">
+<div id="paper4">
   <h5> First Impressions Matter: Signalling as a Source of Policy Dynamics </h5>
   <p>
     (with Michael McMahon)
       <br><i>The Review of Economic Studies (2016) 83 (4): 1645-1672</i></i><br>
-      <span id="p4_dots"></span>
-      <span id="p4_more"><br>
+      <button class="gray-button" onclick="myFunction('p4_more')">Summary</button>
+      <a href="./pdf_files/restud_2016.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p4_more" style="display: none;"><br>
         A new model of reputation for monetary policy makers predicts that all preference types become softer on inflation over time and that this evolution is more pronounced for types that put more weight on output, predictions we confirm using voting data from the Bank of England.
-        <br><br>
-          <a href="./pdf_files/restud_2016.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper5" onclick="myFunction('p5_dots', 'p5_more')">
+<div id="paper5">
   <h5> Shocking Language: Understanding the Macroeconomic Effects of Central Bank Communication </h5>
   <p>
     (with Michael McMahon)
       <br><i>Journal of International Economics (2016), 38th NBER International Seminar on Macroeconomics: S114-S133.</i></i><br>
-      <span id="p5_dots"></span>
-      <span id="p5_more"><br>
+      <button class="gray-button" onclick="myFunction('p5_more')">Summary</button>
+      <a href="./pdf_files/jie_2016.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p5_more" style="display: none;"><br>
         We adopt an automated approach to measuring the extent to which Fed statements provide forward guidance versus information on economic conditions.  Overall, the former has larger macroeconomic effects, particularly on market variables.
-        <br><br>
-          <a href="./pdf_files/jie_2016.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper6" onclick="myFunction('p6_dots', 'p6_more')">
+<div id="paper6">
   <h5> Preferences or Private Assessments on a Monetary Policy Committee? </h5>
   <p>
     (with Michael McMahon and Carlos Velasco)
       <br><i>Journal of Monetary Economics (2014) 67 (October): 16-32.</i></i><br>
-      <span id="p6_dots"></span>
-      <span id="p6_more"><br>
+      <button class="gray-button" onclick="myFunction('p6_more')">Summary</button>
+      <a href="./pdf_files/jme_2014.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p6_more" style="display: none;"><br>
         Experts on the Bank of England's Monetary Policy Committee differ both in terms of preferences and private forecasts.  A committee of internal Bank members significantly outperforms an individual because of information pooling, but both large committees and those that add externals appear to add little value.
-        <br><br>
-          <a href="./pdf_files/jme_2014.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
@@ -163,103 +121,89 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="io">Organizational Economics / IO / Firm Dynamics </h2>
 
-<div id="paper7" onclick="myFunction('p7_dots', 'p7_more')">
+<div id="paper7">
   <h5> The Demand for Executive Skills </h5>
   <p>
       (with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller)
       <br><i>Working paper</i></i><br>
-      <span id="p7_dots"></span>
-      <span id="p7_more"><br>
+      <button class="gray-button" onclick="myFunction('p7_more')">Summary</button>
+      <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <a href="https://www.economist.com/business/2021/11/13/chief-executives-are-weirder-than-ever" target="_blank" rel="noopener noreferrer">
+        <button class="blue-button">The Economist Column</button></a>
+      <span id="p7_more" style="display: none;"><br>
           We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. 
-          <br><br>
-          <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Working Paper</button>
-          </a>
-          <a href="https://www.economist.com/business/2021/11/13/chief-executives-are-weirder-than-ever" target="_blank" rel="noopener noreferrer">
-              <button class="blue-button">The Economist Column</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper8" onclick="myFunction('p8_dots', 'p8_more')">
+<div id="paper8">
   <h5> Firm-level Risk Exposures and Stock Returns in the Wake of COVID-19 </h5>
   <p>
       (with Steven Davis and Cristhian Seminario-Amez)
       <br><i>Working paper</i></i><br>
-      <span id="p8_dots"></span>
-      <span id="p8_more"><br>
+      <button class="gray-button" onclick="myFunction('p8_more')">Summary</button>
+      <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
+        <button class="blue-button">VoxEU Column</button></a>
+      <span id="p8_more" style="display: none;"><br>
           We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. 
-          <br><br>
-          <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Working Paper</button>
-          </a>
-          <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
-              <button class="blue-button">VoxEU Column</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper9" onclick="myFunction('p9_dots', 'p9_more')">
+<div id="paper9">
   <h5> CEO Behavior and Firm Performance </h5>
   <p>
     (with Oriana Bandiera, Andrea Prat, and Raffaella Sadun)
       <br><i>Journal of Political Economy (2020) 128 (4): 1325-1369.</i></i><br>
-      <span id="p9_dots"></span>
-      <span id="p9_more"><br>
+      <button class="gray-button" onclick="myFunction('p9_more')">Summary</button>
+      <a href="./pdf_files/jpe_2020.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p9_more" style="display: none;"><br>
         We use a machine learning algorithm applied to granular CEO survey data to construct a scalar behavioral index.  The index is strongly correlated with firm performance, and this relationship appears only several years after CEO appointment.  Evidence suggests the correlation is due to assignment frictions, which are substantially worse in low-income countries.
-        <br><br>
-          <a href="./pdf_files/jpe_2020.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper10" onclick="myFunction('p10_dots', 'p10_more')">
+<div id="paper10">
   <h5> Vertical Exclusion with Downstream Risk Aversion or Limited Liability </h5>
   <p>
     (with Massimo Motta)
       <br><i>Journal of Industrial Economics (2019) 67 (3-4): 409-447.</i></i><br>
-      <span id="p10_dots"></span>
-      <span id="p10_more"><br>
+      <button class="gray-button" onclick="myFunction('p10_more')">Summary</button>
+      <a href="./pdf_files/jie_2019.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p10_more" style="display: none;"><br>
         When downstream firms are sufficiently risk averse, or subject to limited liability, and cannot observe their competitors' shocks, an upstream firm offers contracts that offer all input to one downstream firm.
-        <br><br>
-          <a href="./pdf_files/jie_2019.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper11" onclick="myFunction('p11_dots', 'p11_more')">
+<div id="paper11">
   <h5> Organizing Public Good Provision: Lessons from Managerial Accounting </h5>
   <p>
     (with Benito Arruñada)
       <br><i>International Review of Law and Economics, (2015) 42 (June): 185-191</i></i><br>
-      <span id="p11_dots"></span>
-      <span id="p11_more"><br>
+      <button class="gray-button" onclick="myFunction('p11_more')">Summary</button>
+      <a href="./pdf_files/irle_2015.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p11_more" style="display: none;"><br>
         We describe how one can interpret public sector organizations through the lens of managerial accounting, and provide anecdotal evidence that mixing strong incentives with bureaucratic administration works well in various settings.
-        <br><br>
-          <a href="./pdf_files/irle_2015.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper12" onclick="myFunction('p12_dots', 'p12_more')">
+<div id="paper12">
   <h5> Performance Feedback with Career Concerns </h5>
   <p>
       <i>Journal of Law, Economics, and Organization (2013) 29 (6): 1279-1316</i></i><br>
-      <span id="p12_dots"></span>
-      <span id="p12_more"><br>
+      <button class="gray-button" onclick="myFunction('p12_more')">Summary</button>
+      <a href="./pdf_files/jleo_2013.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p12_more" style="display: none;"><br>
         When workers have career concerns, performance feedback increases the uncertainty of future effort but allows them to manipulate their employers' beliefs on future effort; the optimal policy only reveals intermediate performance levels.
-        <br><br>
-          <a href="./pdf_files/jleo_2013.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
@@ -267,37 +211,32 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="econ_measurement"> Economic Measurement with Financial Transactions </h2>
 
-<div id="paper13" onclick="myFunction('p13_dots', 'p13_more')">
+<div id="paper13">
   <h5> National Accounts in a World of Naturally Occurring Data: A Proof of Concept for Consumption </h5>
   <p>
       (with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora)
       <br><i>Working paper</i></i><br>
-      <span id="p13_dots"></span>
-      <span id="p13_more"><br>
+      <button class="gray-button" onclick="myFunction('p13_more')">Summary</button>
+      <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <span id="p13_more" style="display: none;"><br>
           We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. 
-          <br><br>
-          <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Working Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
-<div id="paper14" onclick="myFunction('p14_dots', 'p14_more')">
+<div id="paper14">
   <h5> Tracking the COVID-19 Crisis with High-Resolution Transaction Data </h5>
   <p>
     (with Vasco Carvalho, Juan Garcia, Alvaro Ortiz, Tomasa Rodrigo, Jose V Rodriguez Mora, and Jose Ruiz)
       <br><i>Royal Society Open Science (2021) 8: 210218</i></i><br>
-      <span id="p14_dots"></span>
-      <span id="p14_more"><br>
+      <button class="gray-button" onclick="myFunction('p14_more')">Summary</button>
+      <a href="./pdf_files/rsos_2021.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <a href="https://cepr.org/voxeu/columns/tracking-covid-19-crisis-through-lens-14-billion-transactions" target="_blank" rel="noopener noreferrer">
+        <button class="blue-button">VoxEU Column</button></a>
+      <span id="p14_more" style="display: none;"><br>
         We use a database of 1.4 billion payments transactions to track the impact of the COVID-19 pandemic and policy response across time, space, and sectors in Spain.  
-        <br><br>
-          <a href="./pdf_files/rsos_2021.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
-          <a href="https://cepr.org/voxeu/columns/tracking-covid-19-crisis-through-lens-14-billion-transactions" target="_blank" rel="noopener noreferrer">
-              <button class="blue-button">VoxEU Column</button>
-          </a>
       </span>
   </p>
 </div>
@@ -306,54 +245,47 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="stats"> Applied Statistics </h2>
 
-<div id="paper_as_1" onclick="myFunction('as_1_dots', 'as_1_more')">
+<div id="paper_as_1">
   <h5> Graphical Model Inference With External Network Data </h5>
   <p>
     (with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik)
       <br><i>Working paper</i></i><br>
-      <span id="as_1_dots"></span>
-      <span id="as_1_more"><br>
+      <button class="gray-button" onclick="myFunction('as_1_more')">Summary</button>
+      <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <a href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
+        <button class="gray-button">GitHub Repository</button></a>
+      <span id="as_1_more" style="display: none;"><br>
         We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.
-        <br><br>
-        <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
-            <button class="gray-button">GitHub Repository</button>
-        </a>
     </span>
   </p>
 </div>
 
-<div id="paper15" onclick="myFunction('p15_dots', 'p15_more')">
+<div id="paper15">
   <h5> Hamiltonian Monte Carlo for Regression with High-Dimensional Categorical Data </h5>
   <p>
      (with Szymon Sacher and Laura Battaglia)
       <br><i>Working paper</i></i><br>
-      <span id="p15_dots"></span>
-      <span id="p15_more"><br>
+      <button class="gray-button" onclick="myFunction('p15_more')">Summary</button>
+      <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Working Paper</button></a>
+      <span id="p15_more" style="display: none;"><br>
         We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data.  
-        <br><br>
-          <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Working Paper</button>
-          </a>
       </span>
   </p>
 </div>
 
 
-<div id="paper16" onclick="myFunction('p16_dots', 'p16_more')">
+<div id="paper16">
   <h5> Estimating Bayesian Decision Problems with Heterogeneous Expertise </h5>
   <p>
     (with Michael McMahon and Tang Srisuma)
       <br><i>Journal of Applied Econometrics (2016) 31 (4): 762-771</i></i><br>
-      <span id="p16_dots"></span>
-      <span id="p16_more"><br>
+      <button class="gray-button" onclick="myFunction('p16_more')">Summary</button>
+      <a href="./pdf_files/jae_2016.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p16_more" style="display: none;"><br>
         Econometricians can use variation in the prior distribution to substantially improve the accuracy of existing techniques for estimating decision-makers' preferences and private signal distributions.  
-        <br><br>
-          <a href="./pdf_files/jae_2016.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
       </span>
   </p>
 </div>
@@ -362,46 +294,42 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="review"> Review Articles for Text Data and Machine Learning </h2>
 
-<div id="paper17" onclick="myFunction('p17_dots', 'p17_more')">
+<div id="paper17">
   <h5> Text Algorithms in Economics </h5>
   <p>
-    (with Elliot Ash)
+    (with Elliott Ash)
       <br><i>In preparation for Annual Review of Economics</i></i><br>
-      <span id="p17_dots"></span>
-      <span id="p17_more"><br>
-          <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Draft</button>
-          </a>
-          <!-- <a href="">
-            <button class="gray-button">Code</button>
-        </a> -->
+      <!-- <button class="gray-button" onclick="myFunction('p17_more')">Summary</button> -->
+      <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Draft</button></a>
+      <!-- <a href="">
+      <button class="gray-button">Code</button></a> -->
+      <span id="p17_more" style="display: none;"><br>
       </span>
   </p>
 </div>
 
-<div id="paper18" onclick="myFunction('p18_dots', 'p18_more')">
+<div id="paper18">
   <h5> Text Mining for Central Banks </h5>
   <p>
     (with David Bholat, Pedro Santos, and Cheryl Schonhardt-Bailey)
       <br><i>Center for Central Banking Studies Handbook No. 33, Bank of England </i></i><br>
-      <span id="p18_dots"></span>
-      <span id="p18_more"><br>
-          <a href="./pdf_files/ccbs_manual.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Paper</button>
-          </a>
+      <!-- <button class="gray-button" onclick="myFunction('p18_more')">Summary</button> -->
+      <a href="./pdf_files/ccbs_manual.pdf" target="_blank" rel="noopener noreferrer">
+        <button class="red-button">Paper</button></a>
+      <span id="p18_more" style="display: none;"><br>
       </span>
   </p>
 </div>
 
-<div id="paper19" onclick="myFunction('p19_dots', 'p19_more')">
+<div id="paper19">
   <h5> Machine Learning for Economics and Policy </h5>
   <p>
     <i>in Economic Analysis of the Digital Revolution, FUNCAS Social and Economic Studies (5), editors Juan Jose Ganuza and Gerard Llobet </i></i><br>
-      <span id="p19_dots"></span>
-      <span id="p19_more"><br>
-          <a href="./pdf_files/funcas_chapter.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="red-button">Chapter</button>
-          </a>
+    <!-- <button class="gray-button" onclick="myFunction('p19_more')">Summary</button>   -->
+    <a href="./pdf_files/funcas_chapter.pdf" target="_blank" rel="noopener noreferrer">
+      <button class="red-button">Chapter</button></a>
+    <span id="p19_more" style="display: none;"><br>
       </span>
   </p>
 </div>

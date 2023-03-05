@@ -115,11 +115,13 @@ ul.posts li {
     display: inline-block;
     font-size: 14px;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0cm;
+    margin-top: 0.3cm;
   }
 
 .blue-button {
     background-color:#715AFF;
-    border: none;
+    border: none; 
     color: white;
     padding: 6px 10px;
     text-align: center;
@@ -130,7 +132,22 @@ ul.posts li {
   }
 
 .gray-button {
-    background-color:#5F7470;
+    /* background-color:#5F7470; */
+    background-color:#2B303A;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0cm;
+    margin-top: 0.3cm;
+  }
+
+  .green-button {
+    background-color:#8CBA80;
     border: none;
     color: white;
     padding: 6px 10px;
@@ -141,17 +158,9 @@ ul.posts li {
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  .green-button {
-    background-color:#2cdf2f;
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+/* span {
+    outline: 2px solid black;
+} */
 
 /* .container {
     display: flex;
