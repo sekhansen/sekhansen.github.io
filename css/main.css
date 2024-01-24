@@ -33,6 +33,8 @@ body {
   }
 
 
+
+
 /* ----------------------------------- */
 /* Headings, fonts and buttons */
 /* ----------------------------------- */
@@ -49,45 +51,45 @@ nav ul li, footer ul li {
 a {
     text-decoration: none;
     /* color: #999; */
-    color:#C1292E;
+    color:#c12929;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 2.6em;
+    font-size: 2em;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #000000;
 }
 
 h2, h3 {
-    font-size: 1.45em;
+    font-size: 1.25em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:#333;
+    color:#000000;
 }
 
 h5 {
     font-size: 1.25em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #999;
+    color: #000000;
     font-weight:normal;
     margin-bottom:-15px;
     /* word-wrap: break-word; */
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1em;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.25em;
-    color: #333;
+    line-height: 1.1em;
+    color: #000000;
 }
 
 span {
     font-size: 0.8em;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.25em;
-    color: #333;
+    color: #000000;
     /* padding-left: 200px; */
 }
 

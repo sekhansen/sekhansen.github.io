@@ -5,7 +5,7 @@ title: Stephen Hansen - Economics Professor
 
 <!-- define JavaScript function to expand content of papers -->
 <script>
-    function myFunction(more_id) {
+    function showMore(more_id) {
         var moreText = document.getElementById(more_id);
         if (moreText.style.display === "none") {
             moreText.style.display = "block";
@@ -25,7 +25,7 @@ title: Stephen Hansen - Economics Professor
 <div class="square">
 <div>
     <h1>Stephen Hansen</h1>
-    <img src="my_photo_web.jpg" alt="Stephen Hansen Photo" style="width:288px;height:241.5px;padding-right:8%;" align="left" float="left">
+    <img src="my_photo_web.jpg" alt="Stephen Hansen Photo" style="width:288px;height:241.5px;padding-left:8%;" align="right" float="left">
 </div>
 
 <h3> About Me </h3>
@@ -36,13 +36,13 @@ title: Stephen Hansen - Economics Professor
 <div class="blurb">
     <h3> Current Working Papers </h3>
 
-    <div id="paper9" onclick="myFunction('p9_dots', 'p9_more')">
+    <div id="paper9" onclick="showMore('p9_dots', 'p9_more')">
     <div id="paper9">
         <h5> Text Algorithms in Economics </h5>
         <p>
             (with Elliott Ash)
             <br>
-            <button class="gray-button" onclick="myFunction('p9_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p9_more')">Summary</button>
             <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -54,13 +54,13 @@ title: Stephen Hansen - Economics Professor
         </p>
     </div>
 
-    <div id="paper8" onclick="myFunction('p8_dots', 'p8_more')">
+    <div id="paper8" onclick="showMore('p8_dots', 'p8_more')">
     <div id="paper8">
         <h5> Short and Variable Lags </h5>
         <p>
             (with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva)
             <br>
-            <button class="gray-button" onclick="myFunction('p8_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p8_more')">Summary</button>
             <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -72,13 +72,13 @@ title: Stephen Hansen - Economics Professor
         </p>
     </div>
 
-    <div id="paper7" onclick="myFunction('p7_dots', 'p7_more')">
+    <div id="paper7" onclick="showMore('p7_dots', 'p7_more')">
     <div id="paper7">
         <h5> Remote Work across Jobs, Companies, and Space </h5>
         <p>
             (with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska)
             <br>
-            <button class="gray-button" onclick="myFunction('p7_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p7_more')">Summary</button>
             <a href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -92,13 +92,13 @@ title: Stephen Hansen - Economics Professor
         </p>
     </div>
 
-    <div id="paper6" onclick="myFunction('p6_dots', 'p6_more')">
+    <div id="paper6" onclick="showMore('p6_dots', 'p6_more')">
     <div id="paper6">
         <h5> Graphical Model Inference With External Network Data </h5>
         <p>
             (with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik)
             <br>
-            <button class="gray-button" onclick="myFunction('p6_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p6_more')">Summary</button>
             <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -115,7 +115,7 @@ title: Stephen Hansen - Economics Professor
         <p>
             (with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora)
             <br>
-            <button class="gray-button" onclick="myFunction('p5_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p5_more')">Summary</button>
             <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button></a>
             <span id="p5_more" style="display: none;"><br>
@@ -129,7 +129,7 @@ title: Stephen Hansen - Economics Professor
         <p>
             (with Anna Cieslak, Michael McMahon, and Song Xiao)
             <br>
-            <button class="gray-button" onclick="myFunction('p4_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p4_more')">Summary</button>
             <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button></a>
             <span id="p4_more" style="display: none;"><br>
@@ -143,7 +143,7 @@ title: Stephen Hansen - Economics Professor
         <p>
             (with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller)
             <br>
-            <button class="gray-button" onclick="myFunction('p3_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p3_more')">Summary</button>
             <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button></a>
       <a href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
@@ -159,7 +159,7 @@ title: Stephen Hansen - Economics Professor
         <p>
             (with Szymon Sacher and Laura Battaglia)
             <br>
-            <button class="gray-button" onclick="myFunction('p2_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p2_more')">Summary</button>
             <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button></a>
             <span id="p2_more" style="display: none;"><br>
@@ -173,7 +173,7 @@ title: Stephen Hansen - Economics Professor
         <p>
             (with Steven Davis and Cristhian Seminario-Amez)
             <br>
-            <button class="gray-button" onclick="myFunction('p1_more')">Summary</button>
+            <button class="gray-button" onclick="showMore('p1_more')">Summary</button>
             <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button></a>
             <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
