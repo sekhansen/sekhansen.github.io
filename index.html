@@ -3,17 +3,27 @@ layout: default
 title: Stephen Hansen - Economics Professor
 ---
 
-<!-- define JavaScript function to expand content of papers -->
 <script>
-    function showMore(more_id) {
-        var moreText = document.getElementById(more_id);
-        if (moreText.style.display === "none") {
-            moreText.style.display = "block";
-        } 
-        else {
-            moreText.style.display = "none";
-        }
+function showMore(more_id) {
+    // Expand content of paper when "summary" button clicked
+    var moreText = document.getElementById(more_id);
+    if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+    } 
+    else {
+        moreText.style.display = "none";
     }
+}
+function expandOnHover(){
+    // Expand to show description, links etc. on hover
+    this.classList.toggle("active");
+    var panel = this.querySelector(".summary");
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
 </script>
 
 <head>
@@ -37,51 +47,52 @@ title: Stephen Hansen - Economics Professor
 
 <div class="blurb">
     <h3> Current Working Papers </h3>
+    <div class="hover_to_expand_msg">
+        (Hover over a paper to expand)
+    </div>
 
     <div class="paper" id="paper9">
         <h5> Text Algorithms in Economics </h5>
-        <br>
         <div class="authors">
             with Elliott Ash
         </div>
-        <button class="gray-button" onclick="showMore('p9_more')">Summary</button>
-        <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
-            <button class="green-button">GitHub Repository</button></a>
-        <span id="p9_more" style="display: none;"><br>
-            Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
-        </span>
         <div class="summary">
+            <button class="gray-button" onclick="showMore('p9_more')">Summary</button>
+            <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <a href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
+                <button class="green-button">GitHub Repository</button></a>
+            <span id="p9_more" style="display: none;"><br>
+                Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
+            </span>
             Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
         </div>
     </div>
 
     <div class="paper" id="paper8">
         <h5> Short and Variable Lags </h5>
-        <br>
         <div class="authors">
             with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva
         </div>
-        <button class="gray-button" onclick="showMore('p8_more')">Summary</button>
-        <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
-            <button class="blue-button">VoxEU Column</button>
-        </a>
-        <span id="p8_more" style="display: none;"><br>
-            Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
-        </span>
         <div class="summary">
+            <button class="gray-button" onclick="showMore('p8_more')">Summary</button>
+            <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <a href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
+                <button class="blue-button">VoxEU Column</button>
+            </a>
+            <span id="p8_more" style="display: none;"><br>
+                Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
+            </span>
+            <br>
             Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
         </div>
     </div>
 
     <div class="paper" id="paper7">
         <h5> Remote Work across Jobs, Companies, and Space </h5>
-        <br>
         <div class="authors">
             with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska
         </div>
@@ -103,7 +114,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper6">
         <h5> Graphical Model Inference With External Network Data </h5>
-        <br>
         <div class="authors">
             with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik
         </div>
@@ -123,7 +133,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper5">
         <h5> National Accounts in a World of Naturally Occurring Data: A Proof of Concept for Consumption </h5>
-        <br>
         <div class="authors">
             with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora
         </div>
@@ -141,7 +150,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper4">
         <h5> Policymakers' Uncertainty </h5>
-        <br>
         <div class="authors">
             with Anna Cieslak, Michael McMahon, and Song Xiao
         </div>
@@ -159,7 +167,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper3">
         <h5> The Demand for Executive Skills </h5>
-        <br>
         <div class="authors">
             with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller
         </div>
@@ -179,7 +186,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper2">
         <h5> Hamiltonian Monte Carlo for Regression with High-Dimensional Categorical Data </h5>
-        <br>
         <div class="authors">
             with Szymon Sacher and Laura Battaglia
         </div>
@@ -197,7 +203,6 @@ title: Stephen Hansen - Economics Professor
 
     <div class="paper" id="paper1">
         <h5> Firm-level Risk Exposures and Stock Returns in the Wake of COVID-19 </h5>
-        <br>
         <div class="authors">
             with Steven Davis and Cristhian Seminario-Amez
         </div>
@@ -219,3 +224,11 @@ title: Stephen Hansen - Economics Professor
 </div>
 <!-- /.blurb -->
 
+<script>
+var acc = document.getElementsByClassName("paper");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("mouseenter", expandOnHover);
+    acc[i].addEventListener("mouseleave", expandOnHover);
+}
+</script>

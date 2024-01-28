@@ -29,20 +29,32 @@ body {
 
 .paper {
   /* block containing a paper's title and summary (shows on hover) */
+  margin-bottom: -30px;
+  padding-bottom: 10px;
+}
+
+.hover_to_expand_msg {
+  font-size: 0.9em;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25em;
+  color: #999;
 }
 
 .summary {
   /* shown when cursor hovers on the paper title. Contains description and auxiliary links */
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.1em;
+  line-height: 1.25em;
   color: #000000;
-  display: none;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
-.paper:hover .summary {
+/* .paper:hover .summary {
   display:block;
-}
+} */
 
 .row:after {
     content: "";
@@ -82,14 +94,14 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000000;
 }
 
 h2, h3 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:#000000;
 }
@@ -99,7 +111,7 @@ h5 {
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000000;
     font-weight:normal;
-    margin-bottom:-15px;
+    margin-bottom:5px;
     /* word-wrap: break-word; */
 }
 
