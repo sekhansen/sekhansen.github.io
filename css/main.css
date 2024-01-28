@@ -85,12 +85,24 @@ body {
 #navbar a {
   /* float: left; */
   display: block;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   /* padding: 14px 16px 14px 0px; */
   text-decoration: none;
   font-size: 1.1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#navbar a:first-child {
+  /* Apply this to the first element (link to homepage) */
+  float: left;
+  padding: 14px 16px 14px 0px;
+}
+
+#navbar a:not(:first-child) {
+  /* All other elements in the navbar */
+  float: right;
+  padding: 14px 0px 14px 16px;
 }
 
 .page-content {
