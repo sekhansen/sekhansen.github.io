@@ -77,9 +77,10 @@ body {
    ----------------------------------- */
 
 #navbar {
+  position: fixed;
   overflow: hidden;
   background-color: black;
-  padding-left: 60px;
+  padding-left: 15%;
 }
 
 #navbar a {
@@ -103,13 +104,13 @@ body {
   color: white;
 }
 
-.sticky {
-  /* The sticky class is added to the navbar with JS when it 
-reaches its scroll position */
+/* .sticky {
+  The sticky class is added to the navbar with JS when it 
+reaches its scroll position
   position: fixed;
   top: 0;
   width: 100%;
-}
+} */
 
 .page-content {
   /* padding: 16px; */
@@ -117,10 +118,10 @@ reaches its scroll position */
   width: 70%;
 }
 
-.sticky + .page-content {
-  /* Add some padding to the content to prevent it from being overlapped by the fixed menu bar */
+/* .sticky + .page-content {
+  Add some padding to the content to prevent it from being overlapped by the fixed menu bar
   padding-top: 30px;
-}
+} */
 
 /* nav ul, footer ul {
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -134,7 +135,7 @@ nav ul li, footer ul li {
 } */
 
 footer {
-  padding-left: 60px;
+  padding-left: 15%;
 }
 
 a {
