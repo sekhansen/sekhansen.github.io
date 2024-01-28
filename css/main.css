@@ -81,7 +81,7 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: black;
-  /* padding-left: 15%; */
+  padding-left: 15%;
   top: 0;
   width: 100%;
 }
@@ -91,21 +91,16 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 16px 14px 0px;
   text-decoration: none;
   font-size: 1.1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#navbar a:hover {
+/* #navbar a:hover {
   background-color: #ddd;
   color: black;
-}
-
-#navbar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+} */
 
 /* .sticky {
   The sticky class is added to the navbar with JS when it 
@@ -138,7 +133,7 @@ nav ul li, footer ul li {
 } */
 
 footer {
-  padding-left: 60px;
+  padding-left: 15%;
 }
 
 a {
