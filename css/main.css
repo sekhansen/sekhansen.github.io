@@ -82,14 +82,16 @@ body {
   background-color: white;
 }
 
-/* #navbar a {
+#navbar a {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px;
   text-decoration: none;
-} */
+  display: inline;
+  margin-right: 20px;
+}
 
 /* The sticky class is added to the navbar with JS when it 
 reaches its scroll position */
