@@ -73,7 +73,7 @@ body {
    Headings, fonts and buttons 
    ----------------------------------- */
 
-#navbar {
+nav {
   position: fixed;
   overflow: hidden;
   background-color: black;
@@ -82,13 +82,13 @@ body {
   width: 100%;
 }
 
-#navbar a:first-child {
+nav ul li:first-child {
   /* Apply this to the first element (link to homepage) */
   float: left;
   padding: 14px 16px 14px 0px;
 }
 
-#navbar a {
+nav ul li {
   float: right;
   display: block;
   color: #ffffff;
