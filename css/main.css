@@ -37,7 +37,7 @@ body {
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   color: #999;
-  padding-top: -20;
+  margin-top: -20px;
 }
 
 .summary {
@@ -46,7 +46,7 @@ body {
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   color: #000000;
-  padding-top: 10;
+  margin-top: 10px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -80,7 +80,7 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: black;
-  padding-left: 60px;
+  padding-left: 15%;
   top: 0;
   width: 100%;
 }
