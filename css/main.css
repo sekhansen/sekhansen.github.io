@@ -83,14 +83,23 @@ body {
 }
 
 #navbar a {
-  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: left;
   display: block;
+  color: #f2f2f2;
   text-align: center;
-  padding: 14px;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline;
-  margin-right: 20px;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
 /* The sticky class is added to the navbar with JS when it 
