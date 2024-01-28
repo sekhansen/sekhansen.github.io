@@ -3,9 +3,9 @@ body {
     width: 70%;
 }
 
-/* ----------------------------------- */
-/* layout of Home page */
-/* ----------------------------------- */
+/* ----------------------------------- 
+   layout of Home page 
+   ----------------------------------- */
 
 .column {
     float: left;
@@ -73,12 +73,25 @@ body {
 
 
 
-/* ----------------------------------- */
-/* Headings, fonts and buttons */
-/* ----------------------------------- */
-nav {
+/* ----------------------------------- 
+   Headings, fonts and buttons 
+   ----------------------------------- */
+
+/* The sticky class is added to the navbar with JS when it 
+reaches its scroll position */
+.sticky {
   position: fixed;
+  top: 0;
+  width: 100%;
 }
+
+/* Add top padding to page content to prevent sudden quick
+ movement (as the navigation bar gets a new position at the top 
+ of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 nav ul, footer ul {
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0px;
