@@ -1,6 +1,8 @@
 body {
     margin: 60px auto;
     width: 70%;
+    /* stop nav bar overlapping content */
+    padding-top: 60px;
 }
 
 /* ----------------------------------- 
@@ -102,18 +104,16 @@ body {
   color: white;
 }
 
-/* The sticky class is added to the navbar with JS when it 
-reaches its scroll position */
 .sticky {
+  /* The sticky class is added to the navbar with JS when it 
+reaches its scroll position */
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* Add top padding to page content to prevent sudden quick
- movement (as the navigation bar gets a new position at the top 
- of the page (position:fixed and top:0) */
-.sticky + body {
+.page-content {
+  /* Add some padding to the content to prevent it from being overlapped by the fixed menu bar */
   padding-top: 60px;
 }
 
