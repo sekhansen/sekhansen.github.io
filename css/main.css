@@ -118,7 +118,7 @@ reaches its scroll position */
 
 .sticky + .page-content {
   /* Add some padding to the content to prevent it from being overlapped by the fixed menu bar */
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 nav ul, footer ul {
