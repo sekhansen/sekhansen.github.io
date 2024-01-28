@@ -53,10 +53,6 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-/* .paper:hover .summary {
-  display:block;
-} */
-
 .row:after {
     content: "";
     display: table;
@@ -87,50 +83,21 @@ body {
 }
 
 #navbar a {
-  float: left;
+  /* float: left; */
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px 14px 0px;
+  /* padding: 14px 16px 14px 0px; */
   text-decoration: none;
   font-size: 1.1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-/* #navbar a:hover {
-  background-color: #ddd;
-  color: black;
-} */
-
-/* .sticky {
-  The sticky class is added to the navbar with JS when it 
-reaches its scroll position
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
 
 .page-content {
   padding: 16px;
   margin: 60px auto;
   width: 70%;
 }
-
-/* .sticky + .page-content {
-  Add some padding to the content to prevent it from being overlapped by the fixed menu bar
-  padding-top: 30px;
-} */
-
-/* nav ul, footer ul {
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-} */
 
 footer {
   padding-left: 15%;
