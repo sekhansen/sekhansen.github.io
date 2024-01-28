@@ -79,7 +79,7 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: white;
+  background-color: black;
 }
 
 #navbar a {
@@ -113,7 +113,7 @@ reaches its scroll position */
 /* Add top padding to page content to prevent sudden quick
  movement (as the navigation bar gets a new position at the top 
  of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky + body {
   padding-top: 60px;
 }
 
