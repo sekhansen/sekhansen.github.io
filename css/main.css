@@ -37,7 +37,7 @@ body {
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   color: #999;
-  margin-top: -20;
+  padding-top: -20;
 }
 
 .summary {
@@ -115,7 +115,7 @@ reaches its scroll position
 } */
 
 .page-content {
-  /* padding: 16px; */
+  padding: 16px;
   margin: 60px auto;
   width: 70%;
 }
