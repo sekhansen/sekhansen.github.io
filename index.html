@@ -4,26 +4,26 @@ title: Stephen Hansen - Economics Professor
 ---
 
 <script>
-function showMore(more_id) {
-    // Expand content of paper when "summary" button clicked
-    var moreText = document.getElementById(more_id);
-    if (moreText.style.display === "none") {
-        moreText.style.display = "block";
-    } 
-    else {
-        moreText.style.display = "none";
+    function showMore(more_id) {
+        // Expand content of paper when "summary" button clicked
+        var moreText = document.getElementById(more_id);
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+        } 
+        else {
+            moreText.style.display = "none";
+        }
     }
-}
-function expandOnHover(){
-    // Expand to show description, links etc. on hover
-    this.classList.toggle("active");
-    var panel = this.querySelector(".summary");
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+    function expandOnHover(){
+        // Expand to show description, links etc. on hover
+        this.classList.toggle("active");
+        var panel = this.querySelector(".summary");
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     }
-}
 </script>
 
 <head>
@@ -47,7 +47,7 @@ function expandOnHover(){
 
 <div class="blurb">
     <h3> Current Working Papers </h3>
-    <div class="hover_to_expand_msg">
+    <div class="hover-to-expand-msg">
         (Hover over a paper to expand)
     </div>
 
@@ -57,7 +57,9 @@ function expandOnHover(){
             with Elliott Ash
         </div>
         <div class="summary">
-            <button class="gray-button" onclick="showMore('p9_more')">Summary</button>
+            Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p9_more')">Summary</button> -->
             <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -66,7 +68,6 @@ function expandOnHover(){
             <span id="p9_more" style="display: none;"><br>
                 Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
             </span>
-            Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
         </div>
     </div>
 
@@ -76,7 +77,9 @@ function expandOnHover(){
             with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva
         </div>
         <div class="summary">
-            <button class="gray-button" onclick="showMore('p8_more')">Summary</button>
+            Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p8_more')">Summary</button> -->
             <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
                 <button class="red-button">Working Paper</button>
             </a>
@@ -86,8 +89,6 @@ function expandOnHover(){
             <span id="p8_more" style="display: none;"><br>
                 Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
             </span>
-            <br>
-            Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
         </div>
     </div>
 
@@ -96,19 +97,20 @@ function expandOnHover(){
         <div class="authors">
             with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska
         </div>
-        <button class="gray-button" onclick="showMore('p7_more')">Summary</button>
-        <a href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
-            <button class="blue-button">VoxEU Column</button></a>
-        <a href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
-            <button class="green-button">Website</button></a>
-        <span id="p7_more" style="display: none;"><br>
-            We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.
-        </span>
         <div class="summary">
             We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p7_more')">Summary</button> -->
+            <a href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <a href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
+                <button class="blue-button">VoxEU Column</button></a>
+            <a href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
+                <button class="green-button">Website</button></a>
+            <span id="p7_more" style="display: none;"><br>
+                We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.
+            </span>
         </div>
     </div>
 
@@ -117,17 +119,18 @@ function expandOnHover(){
         <div class="authors">
             with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik
         </div>
-        <button class="gray-button" onclick="showMore('p6_more')">Summary</button>
-        <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
-            <button class="green-button">GitHub Repository</button></a>
-        <span id="p6_more" style="display: none;"><br>
-            We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.
-        </span>
         <div class="summary">
             We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p6_more')">Summary</button> -->
+            <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <a href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
+                <button class="green-button">GitHub Repository</button></a>
+            <span id="p6_more" style="display: none;"><br>
+                We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.
+            </span>
         </div>
     </div>
 
@@ -136,15 +139,16 @@ function expandOnHover(){
         <div class="authors">
             with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora
         </div>
-        <button class="gray-button" onclick="showMore('p5_more')">Summary</button>
-        <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <span id="p5_more" style="display: none;"><br>
-            We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. 
-        </span>
         <div class="summary">
             We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. 
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p5_more')">Summary</button> -->
+            <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <span id="p5_more" style="display: none;"><br>
+                We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. 
+            </span>
         </div>
     </div>
 
@@ -153,15 +157,16 @@ function expandOnHover(){
         <div class="authors">
             with Anna Cieslak, Michael McMahon, and Song Xiao
         </div>
-        <button class="gray-button" onclick="showMore('p4_more')">Summary</button>
-        <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <span id="p4_more" style="display: none;"><br>
-            We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. 
-        </span>
         <div class="summary">
             We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. 
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p4_more')">Summary</button> -->
+            <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <span id="p4_more" style="display: none;"><br>
+                We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. 
+            </span>
         </div>
     </div>
 
@@ -170,17 +175,18 @@ function expandOnHover(){
         <div class="authors">
             with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller
         </div>
-        <button class="gray-button" onclick="showMore('p3_more')">Summary</button>
-        <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button></a>
-        <a href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
-            <button class="blue-button">HBR Article</button>
-        </a>
-        <span id="p3_more" style="display: none;"><br>
-            We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. 
-        </span>
         <div class="summary">
             We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. 
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p3_more')">Summary</button> -->
+            <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button></a>
+            <a href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
+                <button class="blue-button">HBR Article</button>
+            </a>
+            <span id="p3_more" style="display: none;"><br>
+                We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. 
+            </span>
         </div>
     </div>
 
@@ -189,15 +195,16 @@ function expandOnHover(){
         <div class="authors">
             with Szymon Sacher and Laura Battaglia
         </div>
-        <button class="gray-button" onclick="showMore('p2_more')">Summary</button>
-        <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <span id="p2_more" style="display: none;"><br>
-            We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data. 
-        </span>
         <div class="summary">
             We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data.
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p2_more')">Summary</button> -->
+            <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <span id="p2_more" style="display: none;"><br>
+                We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data. 
+            </span>
         </div>
     </div>
 
@@ -206,18 +213,19 @@ function expandOnHover(){
         <div class="authors">
             with Steven Davis and Cristhian Seminario-Amez
         </div>
-        <button class="gray-button" onclick="showMore('p1_more')">Summary</button>
-        <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
-            <button class="blue-button">VoxEU Column</button>
-        </a>
-        <span id="p1_more" style="display: none;"><br>
-            We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. 
-        </span>
         <div class="summary">
             We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. 
+            <br>
+            <!-- <button class="gray-button" onclick="showMore('p1_more')">Summary</button> -->
+            <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
+                <button class="red-button">Working Paper</button>
+            </a>
+            <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
+                <button class="blue-button">VoxEU Column</button>
+            </a>
+            <span id="p1_more" style="display: none;"><br>
+                We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. 
+            </span>
         </div>
     </div>
 
@@ -225,10 +233,10 @@ function expandOnHover(){
 <!-- /.blurb -->
 
 <script>
-var acc = document.getElementsByClassName("paper");
-var i;
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("mouseenter", expandOnHover);
-    acc[i].addEventListener("mouseleave", expandOnHover);
-}
+    var acc = document.getElementsByClassName("paper");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("mouseenter", expandOnHover);
+        acc[i].addEventListener("mouseleave", expandOnHover);
+    }
 </script>
