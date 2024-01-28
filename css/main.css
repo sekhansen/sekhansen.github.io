@@ -1,7 +1,6 @@
-/* body {
-    margin: 60px auto;
-    width: 70%;
-} */
+body {
+    margin: 0;
+}
 
 /* ----------------------------------- 
    layout of Home page 
@@ -90,6 +89,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #navbar a:hover {
@@ -111,7 +111,7 @@ reaches its scroll position */
 }
 
 .page-content {
-  padding: 16px;
+  /* padding: 16px; */
   margin: 60px auto;
   width: 70%;
 }
