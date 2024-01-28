@@ -6,19 +6,24 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 	</head>
 	<body>
-		<nav>
+		<!-- <nav>
     		<ul>
         		<li><a href="/">Home</a></li>
 	        	<li><a href="/research.html">Research</a></li>
-        		<!-- <li><a href="/teaching.html">Teaching</a></li> -->
+        		<li><a href="/teaching.html">Teaching</a></li>
         		<li><a href="./pdf_files/cv.pdf">CV</a></li>
     		</ul>
-		</nav>
+		</nav> -->
+		<div id="navbar">
+			<a href="#home">Home</a>
+			<a href="#research">Research</a>
+			<a href="#cv">CV</a>
+		</div> 
+
 		<div class="container">
-      
-    {{ content }}
-      
+    		{{ content }}
 		</div><!-- /.container -->
+		
 		<footer>
     		<ul>
 				<li style="display:inline"><a href="https://github.com/sekhansen">Github</a></li>
