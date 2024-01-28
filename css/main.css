@@ -80,7 +80,7 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: black;
-  padding-left: 15%;
+  margin-left: 15%; 
 }
 
 #navbar a {
@@ -114,7 +114,7 @@ reaches its scroll position
 
 .page-content {
   /* padding: 16px; */
-  margin: 60px auto;
+  margin-top: 60px; 
   width: 70%;
 }
 
