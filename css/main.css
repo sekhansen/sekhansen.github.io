@@ -19,6 +19,31 @@ body {
     width: 62%;
   }
 
+.authors {
+  /* author names under paper titles */
+  font-size: 0.9em;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+  color: #999;
+}
+
+.paper {
+  /* block containing a paper's title and summary (shows on hover) */
+}
+
+.summary {
+  /* shown when cursor hovers on the paper title. Contains description and auxiliary links */
+  font-size: 0.9em;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+  color: #000000;
+  display: none;
+}
+
+.paper:hover .summary {
+  display:block;
+}
+
 .row:after {
     content: "";
     display: table;
@@ -64,13 +89,13 @@ h1 {
 }
 
 h2, h3 {
-    font-size: 1.25em;
+    font-size: 1.3em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:#000000;
 }
 
 h5 {
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000000;
     font-weight:normal;
@@ -81,7 +106,7 @@ h5 {
 p {
     font-size: 1em;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.1em;
+    line-height: 1.3em;
     color: #000000;
 }
 
@@ -148,17 +173,17 @@ ul.posts li {
     margin-top: 0.3cm;
   }
 
-  .green-button {
-    background-color:#8CBA80;
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+.green-button {
+  background-color:#8CBA80;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 /* span {
     outline: 2px solid black;
