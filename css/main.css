@@ -1,9 +1,7 @@
-body {
+/* body {
     margin: 60px auto;
     width: 70%;
-    /* stop nav bar overlapping content */
-    padding-top: 60px;
-}
+} */
 
 /* ----------------------------------- 
    layout of Home page 
@@ -114,6 +112,8 @@ reaches its scroll position */
 
 .page-content {
   padding: 16px;
+  margin: 60px auto;
+  width: 70%;
 }
 
 .sticky + .page-content {

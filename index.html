@@ -244,14 +244,14 @@ title: Stephen Hansen - Economics Professor
 
 
     // Floating nav bar when user scrolls down
-    window.onscroll = function() {myFunction()};
     var nav = document.getElementById("navbar");
     var sticky = nav.offsetTop;
-    function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-    } else {
-        navbar.classList.remove("sticky");
-    }
+    function onScroll() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
     } 
+    window.onscroll = function() {onScroll()};
 </script>
