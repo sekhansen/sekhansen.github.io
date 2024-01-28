@@ -81,7 +81,7 @@ body {
   position: fixed;
   overflow: hidden;
   background-color: black;
-  padding-left: 15%;
+  /* padding-left: 15%; */
   top: 0;
   width: 100%;
 }
