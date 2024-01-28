@@ -79,6 +79,7 @@ body {
 #navbar {
   overflow: hidden;
   background-color: black;
+  padding-left: 60px;
 }
 
 #navbar a {
@@ -121,7 +122,7 @@ reaches its scroll position */
   padding-top: 30px;
 }
 
-nav ul, footer ul {
+/* nav ul, footer ul {
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0px;
     list-style: none;
@@ -130,7 +131,12 @@ nav ul, footer ul {
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
+} */
+
+footer {
+  padding-left: 60px;
 }
+
 a {
     text-decoration: none;
     /* color: #999; */
