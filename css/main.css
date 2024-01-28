@@ -81,6 +81,8 @@ body {
   overflow: hidden;
   background-color: black;
   padding-left: 60px;
+  top: 0;
+  width: 100%;
 }
 
 #navbar a {
