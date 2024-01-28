@@ -209,20 +209,6 @@ title: Stephen Hansen - Economics Professor
 <!-- /.blurb -->
 
 <script>
-
-    // DEPRERCATED //
-    function showMore(more_id) {
-        // Expand content of paper when "summary" button clicked
-        var moreText = document.getElementById(more_id);
-        if (moreText.style.display === "none") {
-            moreText.style.display = "block";
-        } 
-        else {
-            moreText.style.display = "none";
-        }
-    }
-
-
     // When mouse hovers on a paper title, expand
     function expandOnHover(){
         // Expand to show description, links etc. on hover
@@ -241,17 +227,4 @@ title: Stephen Hansen - Economics Professor
         acc[i].addEventListener("mouseenter", expandOnHover);
         acc[i].addEventListener("mouseleave", expandOnHover);
     }
-
-
-    // Floating nav bar when user scrolls down
-    // var nav = document.getElementById("navbar");
-    // var sticky = nav.offsetTop;
-    // function onScroll() {
-    //     if (window.pageYOffset >= sticky) {
-    //         navbar.classList.add("sticky")
-    //     } else {
-    //         navbar.classList.remove("sticky");
-    //     }
-    // } 
-    // window.onscroll = function() {onScroll()};
 </script>

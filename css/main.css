@@ -82,27 +82,21 @@ body {
   width: 100%;
 }
 
-#navbar a {
-  /* float: left; */
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  /* padding: 14px 16px 14px 0px; */
-  text-decoration: none;
-  font-size: 1.1em;
-  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 #navbar a:first-child {
   /* Apply this to the first element (link to homepage) */
   float: left;
   padding: 14px 16px 14px 0px;
 }
 
-#navbar a:not(:first-child) {
-  /* All other elements in the navbar */
+#navbar a {
   float: right;
+  display: block;
+  color: #ffffff;
+  text-align: center;
   padding: 14px 0px 14px 16px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .page-content {
