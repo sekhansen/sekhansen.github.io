@@ -112,7 +112,7 @@ reaches its scroll position */
   width: 100%;
 }
 
-.page-content {
+.sticky + .page-content {
   /* Add some padding to the content to prevent it from being overlapped by the fixed menu bar */
   padding-top: 60px;
 }
