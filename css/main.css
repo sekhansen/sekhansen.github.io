@@ -75,23 +75,38 @@ body {
 
 nav {
   position: fixed;
-  overflow: hidden;
-  background-color: black;
-  padding-left: 15%;
-  top: 0;
-  width: 100%;
+  background-color: #161616;
+  padding: 14px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* nav ul li a:first-child {
-  float: left;
-  padding: 14px 16px 14px 0px;
-} */
+nav h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.1em;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin for the last element */
+}
 
 nav ul li a {
-  display: block;
-  color: #ffffff;
-  text-align: center;
   text-decoration: none;
+  color: white;
   font-size: 1.1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
