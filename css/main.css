@@ -73,12 +73,12 @@ body {
    Headings, fonts and buttons 
    ----------------------------------- */
 
-   nav {
-    position: fixed;
-    background-color: #1c1c1c; /* Set your desired background color */
-    left:0;
-    right:0;
-    top: 0;
+nav {
+  position: fixed;
+  background-color: #1c1c1c; /* Set your desired background color */
+  left:0;
+  right:0;
+  top: 0;
 }
 
 nav ul {
@@ -100,6 +100,7 @@ nav ul li:first-child {
   margin-right: auto;
   font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 0px;
 }
 
 nav ul li a {
@@ -116,18 +117,18 @@ nav ul li a {
 }
 
 a {
-    text-decoration: none;
-    /* color: #999; */
-    color:#c12929;
+  text-decoration: none;
+  /* color: #999; */
+  color:#c12929;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 h1 {
-    font-size: 2.2em;
-    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #000000;
+  font-size: 2.2em;
+  /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000000;
 }
 
 h2, h3 {
