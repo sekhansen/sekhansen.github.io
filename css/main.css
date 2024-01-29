@@ -79,6 +79,8 @@ nav {
   left:0;
   right:0;
   top: 0;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul {
@@ -93,7 +95,6 @@ nav ul {
 nav ul li {
   display: flex;
   align-items: center;
-  margin-left: 25px;
 }
 
 nav ul li:first-child {
@@ -106,6 +107,7 @@ nav ul li:first-child {
 nav ul li a {
   text-decoration: none;
   color: white;
+  margin-left: 25px;
   font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
