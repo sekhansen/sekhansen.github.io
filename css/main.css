@@ -95,7 +95,7 @@ nav ul li {
   align-items: center;
 }
 
-nav ul li:first-child a {
+nav ul li:first-child {
   color: white;
   margin-left: 0;
   margin-right: auto;
