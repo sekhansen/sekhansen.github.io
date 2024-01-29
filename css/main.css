@@ -73,18 +73,18 @@ body {
    Headings, fonts and buttons 
    ----------------------------------- */
 
-nav {
-  position: fixed;
-  background-color: #1c1c1c; /* Set your desired background color */
-  left:0;
-  right:0;
-  padding: 14px 15%;
+   nav {
+    position: fixed;
+    background-color: #1c1c1c; /* Set your desired background color */
+    left:0;
+    right:0;
+    top: 0;
 }
 
 nav ul {
   list-style-type: none;
+  padding: 14px 15%;
   margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,13 +111,8 @@ nav ul li a {
 }
 
 .page-content {
-  padding: 16px;
-  margin: 60px auto;
+  margin: 110px auto;
   width: 70%;
-}
-
-footer {
-  padding-left: 15%;
 }
 
 a {
@@ -166,8 +161,17 @@ span {
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  border-top: 1px solid #d5d5d5;/
+  font-size: .8em;
+}
+
+footer ul {
+  padding-left: 15%
+}
+
+footer ul li {
+  margin-right: 15px;
+  display: inline;
 }
 
 ul.posts { 
