@@ -84,7 +84,7 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 14px 15%;
-  margin: 0;
+  margin-left: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +106,6 @@ nav ul li:first-child {
 nav ul li a {
   text-decoration: none;
   color: white;
-  margin-left: 25px;
   font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
