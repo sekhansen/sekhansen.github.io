@@ -82,12 +82,12 @@ nav {
   width: 100%;
 }
 
-/* nav ul li:first-child {
+/* nav ul li a:first-child {
   float: left;
   padding: 14px 16px 14px 0px;
 } */
 
-nav ul li {
+nav ul li a {
   float: right;
   display: block;
   color: #ffffff;
