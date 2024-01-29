@@ -84,7 +84,6 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 14px 15%;
-  margin-left: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,6 +92,7 @@ nav ul {
 nav ul li {
   display: flex;
   align-items: center;
+  margin-left: 25px;
 }
 
 nav ul li:first-child {
