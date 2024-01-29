@@ -79,8 +79,6 @@ nav {
   left:0;
   right:0;
   top: 0;
-  padding: 0;
-  margin: 0;
 }
 
 nav ul {
@@ -97,8 +95,9 @@ nav ul li {
   align-items: center;
 }
 
-nav ul li:first-child {
+nav ul li:first-child a {
   color: white;
+  margin-left: 0;
   margin-right: auto;
   font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
