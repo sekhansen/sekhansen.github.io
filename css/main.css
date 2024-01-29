@@ -75,18 +75,10 @@ body {
 
 nav {
   position: fixed;
-  background-color: #161616;
+  background-color: #1c1c1c; /* Set your desired background color */
+  left:0;
+  right:0;
   padding: 14px 15%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h1 {
-  color: white;
-  margin: 0;
-  font-size: 1.1em;
-  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav ul {
@@ -94,20 +86,27 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul li {
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
-nav ul li:last-child {
-  margin-right: 0; /* Remove margin for the last element */
+nav ul li:first-child {
+  color: white;
+  margin-right: auto;
+  font-size: 1em;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.1em;
+  margin-left: 25px;
+  font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
