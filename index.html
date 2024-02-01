@@ -215,8 +215,10 @@ title: Stephen Hansen - Economics Professor
         this.classList.toggle("active");
         var panel = this.querySelector(".summary");
         if (panel.style.maxHeight) {
+            // collapse if already expanded
             panel.style.maxHeight = null;
         } else {
+            // expand if currently collapsed
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
     }
@@ -224,7 +226,10 @@ title: Stephen Hansen - Economics Professor
     var acc = document.getElementsByClassName("paper");
     var i;
     for (i = 0; i < acc.length; i++) {
+        // acc[i].addEventListener("focusin", expandOnHover);
+        // acc[i].addEventListener("focusout", expandOnHover);
         acc[i].addEventListener("mouseenter", expandOnHover);
         acc[i].addEventListener("mouseleave", expandOnHover);
+        acc[i].addEventListener("ontouchend", expandOnHover);
     }
 </script>
