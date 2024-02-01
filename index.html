@@ -211,6 +211,7 @@ title: Stephen Hansen - Economics Professor
 <script>
     // When mouse hovers on a paper title, expand
     function expandOnHover(){
+        event.preventDefault()
         // Expand to show description, links etc. on hover
         this.classList.toggle("active");
         var panel = this.querySelector(".summary");
@@ -223,13 +224,12 @@ title: Stephen Hansen - Economics Professor
         }
     }
     // Bind expand function to hover event for all papers
-    var acc = document.getElementsByClassName("paper");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-        // acc[i].addEventListener("focusin", expandOnHover);
-        // acc[i].addEventListener("focusout", expandOnHover);
-        acc[i].addEventListener("mouseenter", expandOnHover);
-        acc[i].addEventListener("mouseleave", expandOnHover);
-        acc[i].addEventListener("touchend", expandOnHover);
+    var papers  = document.getElementsByClassName("paper");
+    for (var i = 0; i < acc.length; i++) {
+        // paper[i].addEventListener("focusin", expandOnHover);
+        // paper[i].addEventListener("focusout", expandOnHover);
+        paper[i].addEventListener("mouseenter", expandOnHover);
+        paper[i].addEventListener("mouseleave", expandOnHover);
+        paper[i].addEventListener("touchend", expandOnHover);
     }
 </script>
