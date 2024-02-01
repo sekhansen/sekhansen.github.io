@@ -224,12 +224,12 @@ title: Stephen Hansen - Economics Professor
         }
     }
     // Bind expand function to hover event for all papers
-    var papers  = document.getElementsByClassName("paper");
-    for (var i = 0; i < acc.length; i++) {
+    var papers = document.getElementsByClassName("paper");
+    for (var i = 0; i < papers.length; i++) {
         // paper[i].addEventListener("focusin", expandOnHover);
         // paper[i].addEventListener("focusout", expandOnHover);
-        paper[i].addEventListener("mouseenter", expandOnHover);
-        paper[i].addEventListener("mouseleave", expandOnHover);
-        paper[i].addEventListener("touchend", expandOnHover);
+        papers[i].addEventListener("mouseenter", expandOnHover);
+        papers[i].addEventListener("mouseleave", expandOnHover);
+        papers[i].addEventListener("touchend", expandOnHover);
     }
 </script>
