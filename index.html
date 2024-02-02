@@ -191,11 +191,16 @@ title: Stephen Hansen - Economics Professor
         }
     }
 
-    function expandOnHover(){
+    function expandOnHover(event){
+        // Don't handle click events on links
+        if (event.target.tagName === "A"){
+            return true;
+        }
+
         // Only expand if it was a tap (on mobile) or mouse click
         if (this.isTap || typeof this.isTap === 'undefined') {
             event.preventDefault();
-            event.stopPropagation();
+            // event.stopPropagation();
             // Expand to show description, links etc. on hover
             this.classList.toggle("active");
             var panel = this.querySelector(".summary");
@@ -208,6 +213,7 @@ title: Stephen Hansen - Economics Professor
             }
         }
     }
+
     // Bind expand function to hover (pc) and touch (mobile) events for all papers
     var papers = document.getElementsByClassName("paper");
     for (var i = 0; i < papers.length; i++) {
@@ -216,6 +222,6 @@ title: Stephen Hansen - Economics Professor
         // Touchscreens
         papers[i].addEventListener("touchstart", handleTouchStart);
         papers[i].addEventListener("touchmove", handleTouchMove);
-        papers[i].addEventListener("touchend", expandOnHover);
+        papers[i].addEventListener("touchend", expandOnHover, false);
     }
 </script>

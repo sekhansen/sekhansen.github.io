@@ -248,9 +248,9 @@ ul.posts li {
 }
 
 .red-link:hover {
-  color: white;
   text-decoration: none;
   background-color: #C1292E;
+  color: white;
 }
 
 .green-link {
@@ -259,9 +259,9 @@ ul.posts li {
 }
 
 .green-link:hover {
-  color: white;
   text-decoration: none;
   background-color: #8CBA80;
+  color: white;
 }
 
 .blue-link {
@@ -270,7 +270,7 @@ ul.posts li {
 }
 
 .blue-link:hover {
-  color: white;
   text-decoration: none;
   background-color: #715AFF;
+  color: white;
 }
