@@ -32,16 +32,17 @@ body {
 }
 
 .paper:hover {
-  border: 1px solid black;
+  outline: 1px solid black;
+  outline-offset: -1px; /* compensate for the width of the outline */
   border-radius: 4px;
 }
 
 .paper h5 {
-  margin-top: 0;
+  margin-top: 0px;
 }
 
-.blurb h2 {
-  
+.blurb h3 {
+  margin-bottom: 4px;
 }
 
 .hover-to-expand-msg {
@@ -49,7 +50,6 @@ body {
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   color: #999;
-  margin-top: -20px; /* make msg appear directly under heading (which has margin) */
   margin-bottom: 30px;
 }
 
@@ -57,9 +57,8 @@ body {
   /* shown when cursor hovers on the paper title. Contains description and auxiliary links */
   font-size: 0.9em;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.25em;
+  line-height: 1.35em;
   color: #000000;
-  /* margin-top: 10px; */
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -143,6 +142,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 h1 {
   font-size: 2.2em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
