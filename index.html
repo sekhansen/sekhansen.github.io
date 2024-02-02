@@ -195,6 +195,7 @@ title: Stephen Hansen - Economics Professor
         // Only expand if it was a tap (on mobile) or mouse click
         if (this.isTap || typeof this.isTap === 'undefined') {
             event.preventDefault();
+            event.stopPropagation();
             // Expand to show description, links etc. on hover
             this.classList.toggle("active");
             var panel = this.querySelector(".summary");
