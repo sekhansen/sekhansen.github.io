@@ -29,6 +29,8 @@ title: Stephen Hansen - Economics Professor
         (Hover on a paper to expand. On mobile, tap to expand.)
     </div>
 
+    <!-- Use '>' on next line to end closing tag of one link right before start of another. Prevents unwanted extra whitespace between links. -->
+
     <div class="paper" id="paper9">
         <h5> Text Algorithms in Economics </h5>
         <div class="authors">
@@ -38,8 +40,8 @@ title: Stephen Hansen - Economics Professor
             <p>Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.</p>
             <a class="red-link" href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="green-link" href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="green-link" href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
                 GitHub Repository
             </a>
         </div>
@@ -54,8 +56,8 @@ title: Stephen Hansen - Economics Professor
             <p>Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.</p>
             <a class="red-link" href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="blue-link" href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
                 VoxEU Column
             </a>
         </div>
@@ -70,11 +72,11 @@ title: Stephen Hansen - Economics Professor
             <p>We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.</p>
             <a class="red-link" href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="blue-link" href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
                 VoxEU Column
-            </a>
-            <a class="green-link" href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="green-link" href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
                 Website
             </a>
         </div>
@@ -89,8 +91,8 @@ title: Stephen Hansen - Economics Professor
             <p>We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.</p>
             <a class="red-link" href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="green-link" href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="green-link" href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
                 GitHub Repository
             </a>
         </div>
@@ -131,8 +133,8 @@ title: Stephen Hansen - Economics Professor
             <p>We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. </p>
             <a class="red-link" href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="blue-link" href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="blue-link" href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
                 HBR Article
             </a>
         </div>
@@ -160,8 +162,8 @@ title: Stephen Hansen - Economics Professor
             <p>We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. </p>
             <a class="red-link" href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
                 Paper
-            </a>
-            <a class="blue-link" href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
                 VoxEU Column
             </a>
         </div>
@@ -209,7 +211,8 @@ title: Stephen Hansen - Economics Professor
                 panel.style.maxHeight = null;
             } else {
                 // expand if currently collapsed
-                panel.style.maxHeight = panel.scrollHeight + "px";
+                // add some extra px to avoid border of coloured links being cut off - scrollheight rounds to nearest int
+                panel.style.maxHeight = panel.scrollHeight + 5 + "px";
             }
         }
     }
