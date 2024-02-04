@@ -242,7 +242,8 @@ ul.posts li {
 }
 
 .red-link {
-  border: 1px solid #C1292E;
+  outline: 1px solid #C1292E;
+  outline-offset: -1px;
   color: #C1292E;
 }
 
@@ -253,7 +254,8 @@ ul.posts li {
 }
 
 .green-link {
-  border: 1px solid #8CBA80;
+  outline: 1px solid #8CBA80;
+  outline-offset: -1px;
   color: #8CBA80;
 }
 
@@ -264,7 +266,8 @@ ul.posts li {
 }
 
 .blue-link {
-  border: 1px solid #715AFF;
+  outline: 1px solid #715AFF;
+  outline-offset: -1px;
   color: #715AFF;
 }
 
