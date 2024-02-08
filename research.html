@@ -3,19 +3,6 @@ layout: default
 title: Stephen Hansen - Research
 ---
 
-<!-- define JavaScript function to expand content of papers -->
-<script>
-  function myFunction(more_id) {
-      var moreText = document.getElementById(more_id);
-      if (moreText.style.display === "none") {
-          moreText.style.display = "block";
-      } 
-      else {
-          moreText.style.display = "none";
-      }
-  }
-</script>
-
 <head>
   <title>{{ page.title }}</title>
   <!-- link to main stylesheet -->
@@ -31,27 +18,28 @@ title: Stephen Hansen - Research
 </div>
 <br>
 
+<!-- Put '>' on next line to end closing tag of one link right before start of another. Prevents unwanted extra whitespace between links. -->
+
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="monetary_policy">Monetary Policy / Central Bank Design </h2>
 
-<div id="mon_pol_7">
+<div class="paper" id="mon_pol_7">
     <h5> Short and Variable Lags </h5>
-    <p>
-        (with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva)
-        <br>
-        <button class="gray-button" onclick="myFunction('mp7_more')">Summary</button>
-        <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
+    <div class="authors">
+      with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva
+    </div>
+    <div class="summary">
+        <p>Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.</p>
+        <a class="red-link" href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
+            Paper
+        </a
+        ><a class="blue-link" href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
+            VoxEU Column
         </a>
-        <a href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
-            <button class="blue-button">VoxEU Column</button></a>
-        <span id="mp7_more" style="display: none;"><br>
-            Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
-        </span>
-    </p>
+    </div>
 </div>
 
-<div id="mon_pol_6">
+<div class="paper" id="mon_pol_6">
   <h5> Policymakers' Uncertainty </h5>
   <p>
       (with Anna Cieslak, Michael McMahon, and Song Xiao)
@@ -65,7 +53,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="mon_pol_5">
+<div class="paper" id="mon_pol_5">
   <h5> The Long-Run Information Effect of Central Bank Communication </h5>
   <p>
     (with Michael McMahon and Matthew Tong)
@@ -79,7 +67,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="mon_pol_4">
+<div class="paper" id="mon_pol_4">
   <h5> Transparency and Deliberation within the FOMC: a Computational Linguistics Approach </h5>
   <p>
     (with Michael McMahon and Andrea Prat)
@@ -93,7 +81,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="mon_pol_3">
+<div class="paper" id="mon_pol_3">
   <h5> First Impressions Matter: Signalling as a Source of Policy Dynamics </h5>
   <p>
     (with Michael McMahon)
@@ -107,7 +95,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="mon_pol_2">
+<div class="paper" id="mon_pol_2">
   <h5> Shocking Language: Understanding the Macroeconomic Effects of Central Bank Communication </h5>
   <p>
     (with Michael McMahon)
@@ -121,7 +109,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="mon_pol_1">
+<div class="paper" id="mon_pol_1">
   <h5> Preferences or Private Assessments on a Monetary Policy Committee? </h5>
   <p>
     (with Michael McMahon and Carlos Velasco)
@@ -138,7 +126,7 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="io">Organizational Economics / IO / Firm Dynamics </h2>
 
-<div id="firm_7">
+<div class="paper" id="firm_7">
     <h5> Remote Work across Jobs, Companies, and Space </h5>
     <p>
         (with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska)
@@ -157,7 +145,7 @@ title: Stephen Hansen - Research
     </p>
 </div>
 
-<div id="firm_6">
+<div class="paper" id="firm_6">
   <h5> The Demand for Executive Skills </h5>
   <p>
       (with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller)
@@ -173,7 +161,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="firm_5">
+<div class="paper" id="firm_5">
   <h5> Firm-level Risk Exposures and Stock Returns in the Wake of COVID-19 </h5>
   <p>
       (with Steven Davis and Cristhian Seminario-Amez)
@@ -189,7 +177,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="firm_4">
+<div class="paper" id="firm_4">
   <h5> CEO Behavior and Firm Performance </h5>
   <p>
     (with Oriana Bandiera, Andrea Prat, and Raffaella Sadun)
@@ -205,7 +193,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="firm_3">
+<div class="paper" id="firm_3">
   <h5> Vertical Exclusion with Downstream Risk Aversion or Limited Liability </h5>
   <p>
     (with Massimo Motta)
@@ -219,7 +207,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="firm_2">
+<div class="paper" id="firm_2">
   <h5> Organizing Public Good Provision: Lessons from Managerial Accounting </h5>
   <p>
     (with Benito Arruñada)
@@ -233,7 +221,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="firm_1">
+<div class="paper" id="firm_1">
   <h5> Performance Feedback with Career Concerns </h5>
   <p>
       <i>Journal of Law, Economics, and Organization (2013) 29 (6): 1279-1316</i></i><br>
@@ -249,7 +237,7 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="econ_measurement"> Economic Measurement with Financial Transactions </h2>
 
-<div id="transact_2">
+<div class="paper" id="transact_2">
   <h5> National Accounts in a World of Naturally Occurring Data: A Proof of Concept for Consumption </h5>
   <p>
       (with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora)
@@ -263,7 +251,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="transact_1">
+<div class="paper" id="transact_1">
   <h5> Tracking the COVID-19 Crisis with High-Resolution Transaction Data </h5>
   <p>
     (with Vasco Carvalho, Juan Garcia, Alvaro Ortiz, Tomasa Rodrigo, Jose V Rodriguez Mora, and Jose Ruiz)
@@ -283,7 +271,7 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="stats"> Applied Statistics </h2>
 
-<div id="stat_3">
+<div class="paper" id="stat_3">
   <h5> Graphical Model Inference With External Network Data </h5>
   <p>
     (with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik)
@@ -299,7 +287,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="stat_2">
+<div class="paper" id="stat_2">
   <h5> Hamiltonian Monte Carlo for Regression with High-Dimensional Categorical Data </h5>
   <p>
      (with Szymon Sacher and Laura Battaglia)
@@ -314,7 +302,7 @@ title: Stephen Hansen - Research
 </div>
 
 
-<div id="stat_1">
+<div class="paper" id="stat_1">
   <h5> Estimating Bayesian Decision Problems with Heterogeneous Expertise </h5>
   <p>
     (with Michael McMahon and Tang Srisuma)
@@ -332,24 +320,24 @@ title: Stephen Hansen - Research
 <hr style="width:80%;text-align:left;margin-left:0">
 <h2 id="review"> Review Articles for Text Data and Machine Learning </h2>
 
-<div id="review_3">
+<div class="paper" id="review_3">
     <h5> Text Algorithms in Economics </h5>
     <p>
-        (with Elliott Ash)
-        <br>
-        <button class="gray-button" onclick="myFunction('r3_more')">Summary</button>
-        <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="red-button">Working Paper</button>
-        </a>
-        <a href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
-            <button class="green-button">GitHub Repository</button></a>
-        <span id="r3_more" style="display: none;"><br>
-            Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
-        </span>
+      (with Elliott Ash)
+      <br>
+      <button class="gray-button" onclick="myFunction('r3_more')">Summary</button>
+      <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
+          <button class="red-button">Working Paper</button>
+      </a>
+      <a href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
+          <button class="green-button">GitHub Repository</button></a>
+      <span id="r3_more" style="display: none;"><br>
+          Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
+      </span>
     </p>
 </div>
 
-<div id="review_2">
+<div class="paper" id="review_2">
   <h5> Text Mining for Central Banks </h5>
   <p>
     (with David Bholat, Pedro Santos, and Cheryl Schonhardt-Bailey)
@@ -362,7 +350,7 @@ title: Stephen Hansen - Research
   </p>
 </div>
 
-<div id="review_1">
+<div class="paper" id="review_1">
   <h5> Machine Learning for Economics and Policy </h5>
   <p>
     <i>in Economic Analysis of the Digital Revolution, FUNCAS Social and Economic Studies (5), editors Juan Jose Ganuza and Gerard Llobet </i></i><br>
@@ -373,3 +361,60 @@ title: Stephen Hansen - Research
       </span>
   </p>
 </div>
+
+<script>
+  // Expand papers on hover (pc) or touch (mobile)
+  
+  function handleTouchStart(event) {
+      // Store coords when a touch starts
+      this.startX = event.touches[0].clientX;
+      this.startY = event.touches[0].clientY;
+      this.isTap = true;
+  }
+  
+  function handleTouchMove(event) {
+      // Distance moved during touch
+      var dx = event.touches[0].clientX-this.startX;
+      var dy = event.touches[0].clientY-this.startY;
+      var dist = dx**2+dy**2;
+      // If touch moves significantly, consider it a scroll
+      if (dist > 100) {
+          this.isTap = false;
+      }
+  }
+  
+  function expandOnHover(event){
+      // Don't handle click events on links
+      if (event.target.tagName === "A"){
+          return true;
+      }
+  
+      // Only expand if it was a tap (on mobile) or mouse click
+      if (this.isTap || typeof this.isTap === 'undefined') {
+          event.preventDefault();
+          // Expand to show description, links etc. on hover
+          this.classList.toggle("active");
+          var panel = this.querySelector(".summary");
+          if (panel.style.maxHeight) {
+              // collapse if already expanded
+              panel.style.maxHeight = null;
+          } else {
+              // expand if currently collapsed
+              // add some extra px to avoid border of coloured links being cut off - scrollheight rounds to nearest int
+              panel.style.maxHeight = panel.scrollHeight + 5 + "px";
+          }
+      }
+  }
+  
+  // Bind expand function to events for all papers
+  var papers = document.getElementsByClassName("paper");
+  for (var i = 0; i < papers.length; i++) {
+      // Mouse events
+      papers[i].addEventListener("mouseenter", expandOnHover);
+      papers[i].addEventListener("mouseleave", expandOnHover);
+      // Touchscreen events
+      papers[i].addEventListener("touchstart", handleTouchStart);
+      papers[i].addEventListener("touchmove", handleTouchMove);
+      papers[i].addEventListener("touchend", expandOnHover);
+  }
+  </script>
