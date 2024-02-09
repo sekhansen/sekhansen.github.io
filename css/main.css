@@ -169,6 +169,23 @@ p {
     color: #000000;
 }
 
+.research-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.research-nav a {
+  font-size: 1.2em;
+  color: black;
+  /* padding: 3px 6px; */
+}
+
+.research-nav .vl {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 23px;
+}
+
 footer {
   border-top: 1px solid #d5d5d5;
   font-size: .8em;
