@@ -23,7 +23,7 @@ body {
   /* author names under paper titles */
   font-size: 0.9em;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.1em;
+  line-height: 1.25em;
   color: #999;
 }
 
@@ -67,7 +67,7 @@ body {
 
 .summary p {
   margin: 0px;
-  padding: 10px 0px
+  padding: 10px 0px;
 }
 
 .row:after {
