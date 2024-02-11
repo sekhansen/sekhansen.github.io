@@ -90,7 +90,7 @@ body {
    Headings, fonts and buttons 
    ----------------------------------- */
 
-nav {
+.main-nav {
   position: fixed;
   background-color: #1c1c1c;
   left:0;
@@ -98,7 +98,7 @@ nav {
   top: 0;
 }
 
-nav ul {
+.main-nav ul {
   list-style-type: none;
   padding: 14px 15%;
   margin: 0px;
@@ -107,13 +107,13 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
+.main-nav ul li {
   display: flex;
   align-items: center;
   margin-left: 25px;
 }
 
-nav ul li:first-child {
+.main-nav ul li:first-child {
   color: white;
   margin-left: 0px;
   margin-right: auto;
@@ -121,7 +121,7 @@ nav ul li:first-child {
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-nav ul li a {
+.main-nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 1em;
@@ -170,20 +170,46 @@ p {
 }
 
 .research-nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.research-nav ul {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 
-.research-nav a {
-  font-size: 1.2em;
+.research-nav ul li {
+  text-decoration: none;
+  /* padding: 24px; */
+  padding: 1em 0em;
+}
+
+.research-nav ul li.active{
+  background-color: lightgray;
+}
+
+.research-nav ul li a {
+  font-size: 1.1em;
   color: black;
-  /* padding: 3px 6px; */
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1em 1.4em;
 }
 
-.research-nav .vl {
+/* .research-nav ul li .vl {
   border-left: 1px solid black;
   border-right: 1px solid black;
   height: 23px;
+} */
+
+.research-nav hr {
+  margin: 0px;
 }
 
 footer {
