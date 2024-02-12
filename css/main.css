@@ -24,12 +24,18 @@ body {
     width: 62%;
   }
 
-.authors {
+.authors, .publication {
   /* author names under paper titles */
   font-size: 0.9em;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   color: #999;
+}
+
+.publication {
+  /* review/journal name under paper title and authors */
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .paper {
