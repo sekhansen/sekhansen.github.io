@@ -29,14 +29,14 @@
 
 <script>
     // When mouse hovers on a paper title, expand
-    
+      
     function handleTouchStart(event) {
-        // Store coords when a touch starts
-        this.startX = event.touches[0].clientX;
-        this.startY = event.touches[0].clientY;
-        this.isTap = true;
-    }
-    
+          // Store coords when a touch starts
+          this.startX = event.touches[0].clientX;
+          this.startY = event.touches[0].clientY;
+          this.isTap = true;
+      }
+      
     function handleTouchMove(event) {
         // Distance moved during touch
         var dx = event.touches[0].clientX-this.startX;
@@ -47,7 +47,7 @@
             this.isTap = false;
         }
     }
-    
+      
     function expandOnHover(event){
         // Don't handle click events on links
         if (event.target.tagName === "A"){
@@ -70,7 +70,7 @@
             }
         }
     }
-    
+      
     // Bind expand function to hover (pc) and touch (mobile) events for all papers
     var papers = document.getElementsByClassName("paper");
     for (var i = 0; i < papers.length; i++) {
@@ -85,12 +85,11 @@
     
     
     // Highlight research nav link corresponding to the current section of the page in view
-    
-    const sections = document.querySelectorAll('div.research-section');
+    const sections = document.querySelectorAll("div.research-section");
     const config = {
-      rootMargin: '-50px 0px -55%'
+      rootMargin: "-30% 0px -30% 0px"
     };
-    
+  
     let observer = new IntersectionObserver(function (entries, self) {
       entries.forEach(entry => {
         console.log(entry);
@@ -106,16 +105,23 @@
     
     function intersectionHandler(entry) {
       const id = entry.target.id;
-      const currentlyActive = document.querySelector('.research-nav li.active');
-      const shouldBeActive = document.querySelector('.research-nav li[data-ref=' + id + ']');
+      const currentlyActive = document.querySelector(".research-nav li.active");
+      const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
     
       if (currentlyActive) {
-        currentlyActive.classList.remove('active');
+        currentlyActive.classList.remove("active");
       }
       if (shouldBeActive) {
-        shouldBeActive.classList.add('active');
+        shouldBeActive.classList.add("active");
       }
     }
+  
+    // Dynamically adjust the top value for research-nav based on the height of main-nav
+    document.addEventListener("DOMContentLoaded", function () {
+      var mainNavHeight = document.querySelector(".main-nav").offsetHeight;
+      var researchNav = document.querySelector(".research-nav");
+      researchNav.style.top = mainNavHeight + 0.5 + "px";
+    });
 </script>
 
 </html>
