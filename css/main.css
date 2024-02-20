@@ -1,3 +1,5 @@
+/* design for mobile first, then adjust for desktop after with media query */
+
 body {
     margin: 0px;
     padding: 0px;
@@ -5,7 +7,7 @@ body {
 
 .page-content {
   margin: 6rem auto 2rem auto;
-  width: 70%;
+  width: 95%;
 }
 
 /* ----------------------------------- 
@@ -94,6 +96,21 @@ body {
   padding-bottom: 3%;
 }
 
+.square img {
+  width:200px;
+  height:auto;
+  padding-right:4%;
+  float: left;
+}
+
+@media only screen and (min-width: 600px){
+  /* for desktop */
+  .page-content {width: 70%;}
+  .square img {
+    width:288px;
+  }
+}
+
 
 
 
@@ -111,7 +128,7 @@ body {
 
 .main-nav ul {
   list-style-type: none;
-  padding: 0.8rem 15%;
+  padding: 0.8rem 2.5%;
   margin: 0rem;
   display: flex;
   justify-content: space-between;
@@ -227,7 +244,7 @@ footer {
 }
 
 footer ul {
-  padding-left: 15%
+  padding-left: 2.5%;
 }
 
 footer ul li {
@@ -242,6 +259,12 @@ footer ul li a {
 
 footer ul li a i {
   padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 600px){
+  /* for desktop */
+  .main-nav ul {padding: 0.8rem 15%;}
+  footer ul {padding-left: 15%;}
 }
 
 /* ul.posts { 
