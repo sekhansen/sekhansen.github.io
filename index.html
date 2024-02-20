@@ -3,11 +3,26 @@ layout: default
 title: Stephen Hansen - Economics Professor
 ---
 
+<!DOCTYPE html>
+<html>
 <head>
-    <title>{{ page.title }}</title>
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+	<title>{{ page.title }}</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!-- Add icon library for social media icons in the footer -->
+    <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/brands.css">
 </head>
+<body>
+	<nav class="main-nav">
+		<ul>
+			<li><a href="./index.html">Stephen Hansen</a></li>
+			<li><a href="./research.html">Research</a></li>
+			<li><a href="./pdf_files/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+		</ul>
+	</nav>
+
+<div class="page-content">
 
 
 <div class="square">
@@ -171,3 +186,118 @@ title: Stephen Hansen - Economics Professor
 
 </div>
 <!-- /.blurb -->
+
+
+<!-- REMOVE ALL BELOW -->
+
+
+</div><!-- /.container -->
+
+
+<footer>
+    <ul>
+        <li><a href="https://github.com/sekhansen" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Github</a></li>
+        <li><a href="https://scholar.google.co.uk/citations?user=mXiyl7YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a></li>
+        <li><a href="https://twitter.com/StephenEKHansen" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+    </ul>
+</footer>
+</body>
+
+<script>
+    // When mouse hovers on a paper title, expand
+      
+    function handleTouchStart(event) {
+          // Store coords when a touch starts
+          this.startX = event.touches[0].clientX;
+          this.startY = event.touches[0].clientY;
+          this.isTap = true;
+      }
+      
+    function handleTouchMove(event) {
+        // Distance moved during touch
+        var dx = event.touches[0].clientX-this.startX;
+        var dy = event.touches[0].clientY-this.startY;
+        var dist = dx**2+dy**2;
+        // If touch moves significantly, consider it a scroll
+        if (dist > 100) {
+            this.isTap = false;
+        }
+    }
+      
+    function expandOnHover(event){
+        // Don't handle click events on links
+        if (event.target.tagName === "A"){
+            return true;
+        }
+    
+        // Only expand if it was a tap (on mobile) or mouse click
+        if (this.isTap || typeof this.isTap === 'undefined') {
+            event.preventDefault();
+            // Expand to show description, links etc. on hover
+            this.classList.toggle("active");
+            var panel = this.querySelector(".summary");
+            if (panel.style.maxHeight) {
+                // collapse if already expanded
+                panel.style.maxHeight = null;
+            } else {
+                // expand if currently collapsed
+                // add some extra px to avoid border of coloured links being cut off - scrollheight rounds to nearest int
+                panel.style.maxHeight = panel.scrollHeight + 5 + "px";
+            }
+        }
+    }
+      
+    // Bind expand function to hover (pc) and touch (mobile) events for all papers
+    var papers = document.getElementsByClassName("paper");
+    for (var i = 0; i < papers.length; i++) {
+        // Mouse events
+        papers[i].addEventListener("mouseenter", expandOnHover);
+        papers[i].addEventListener("mouseleave", expandOnHover);
+        // Touchscreen events
+        papers[i].addEventListener("touchstart", handleTouchStart);
+        papers[i].addEventListener("touchmove", handleTouchMove);
+        papers[i].addEventListener("touchend", expandOnHover);
+    }
+    
+    
+    // Highlight research nav link corresponding to the current section of the page in view
+    const sections = document.querySelectorAll("div.research-section");
+    const config = {
+      rootMargin: "-30% 0px -30% 0px"
+    };
+  
+    let observer = new IntersectionObserver(function (entries, self) {
+      entries.forEach(entry => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          intersectionHandler(entry); 
+        }
+      });
+    }, config);
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    function intersectionHandler(entry) {
+      const id = entry.target.id;
+      const currentlyActive = document.querySelector(".research-nav li.active");
+      const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
+    
+      if (currentlyActive) {
+        currentlyActive.classList.remove("active");
+      }
+      if (shouldBeActive) {
+        shouldBeActive.classList.add("active");
+      }
+    }
+  
+    // Dynamically adjust the top value for research-nav based on the height of main-nav
+    document.addEventListener("DOMContentLoaded", function () {
+      var mainNavHeight = document.querySelector(".main-nav").offsetHeight;
+      var researchNav = document.querySelector(".research-nav");
+      researchNav.style.top = mainNavHeight + 0.5 + "px";
+    });
+</script>
+
+</html>

@@ -4,7 +4,7 @@ body {
 }
 
 .page-content {
-  margin: 110px auto;
+  margin: 6rem auto 2rem auto;
   width: 70%;
 }
 
@@ -26,20 +26,20 @@ body {
 
 .authors, .publication {
   /* author names under paper titles */
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.25em;
+  line-height: 1.25rem;
   color: #999;
 }
 
 .publication {
   /* review/journal name under paper title and authors */
-  margin-top: 5px;
+  margin-top: 0.3rem;
   font-style: italic;
 }
 
 .paper {
-  padding: 10px;
+  padding: 0.7rem;
 }
 
 .paper.active {
@@ -54,22 +54,22 @@ body {
 }
 
 .blurb h3 {
-  margin-bottom: 4px;
+  margin-bottom: 0.2rem;
 }
 
 .hover-to-expand-msg {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.25em;
+  line-height: 1.25rem;
   color: #999;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .summary {
   /* shown when cursor hovers on the paper title. Contains description and auxiliary links */
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.35em;
+  line-height: 1.35rem;
   color: #000000;
   max-height: 0px;
   overflow: hidden;
@@ -77,8 +77,8 @@ body {
 }
 
 .summary p {
-  margin: 0px;
-  padding: 10px 0px;
+  margin: 0rem;
+  padding: 0.6rem 0rem;
 }
 
 .row:after {
@@ -111,8 +111,8 @@ body {
 
 .main-nav ul {
   list-style-type: none;
-  padding: 0.8em 15%;
-  margin: 0px;
+  padding: 0.8rem 15%;
+  margin: 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,21 +121,20 @@ body {
 .main-nav ul li {
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 1.5rem;
 }
 
 .main-nav ul li:first-child {
   color: white;
-  margin-left: 0px;
+  margin-left: 0rem;
   margin-right: auto;
-  font-size: 1em;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .main-nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1em;
+  font-size: 1.1rem;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -149,34 +148,34 @@ a:hover {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
 }
 
 h2, h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:#000000;
 }
 
 h5 {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000000;
     font-weight:normal;
-    margin-bottom:5px;
+    margin-bottom:0.3rem;
 }
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.3em;
     color: #000000;
 }
 
 .research-nav {
-  margin-top: 60px;
+  margin-top: 3.6rem;
   position: sticky;
   /* top: 0; */
   background-color: white;
@@ -188,14 +187,14 @@ p {
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 .research-nav ul li {
   text-decoration: none;
   /* padding: 24px; */
-  padding: 0.8em 0em;
+  padding: 0.8rem 0rem;
 }
 
 .research-nav ul li.active{
@@ -203,10 +202,10 @@ p {
 }
 
 .research-nav ul li a {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: black;
   font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 0.8em 1.4em;
+  padding: 0.8rem 1.4rem;
 }
 
 /* .research-nav ul li .vl {
@@ -216,16 +215,15 @@ p {
 } */
 
 .research-nav hr {
-  margin: 0px;
+  margin: 0rem;
 }
 
 .research-section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 5.4rem;
 }
 
 footer {
   border-top: 1px solid #d5d5d5;
-  font-size: .8em;
 }
 
 footer ul {
@@ -233,18 +231,27 @@ footer ul {
 }
 
 footer ul li {
-  margin-right: 15px;
+  margin-right: 1.2rem;
   display: inline;
 }
 
-ul.posts { 
+footer ul li a {
+  color: black;
+  font-size: 1.1rem;
+}
+
+footer ul li a i {
+  padding-right: 0.5rem;
+}
+
+/* ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 ul.posts li {
     list-style: none;
-}
+} */
 
 /* .red-button, .green-button, .blue-button {
   display: inline-block;
@@ -285,13 +292,13 @@ ul.posts li {
 
 .red-link, .green-link, .blue-link {
   border-radius: 4px; 
-  padding: 3px 6px;
+  padding: 0.2rem 0.4rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-right: 10px;
+  margin-right: 0.7rem;
   transition: background-color 0.3s ease;
 }
 
