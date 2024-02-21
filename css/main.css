@@ -202,13 +202,16 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-.research-nav div i {
-  vertical-align: middle;
+.research-nav div .fa-caret-up {
+  display: none;
 }
 
 .research-nav ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0rem;
   margin: 0rem;
@@ -283,7 +286,7 @@ footer ul li a i {
   }
   
   .research-nav ul {
-    display: flex;
+    flex-direction: row;
     list-style: none;
     padding: 0rem;
     margin: 0rem;
