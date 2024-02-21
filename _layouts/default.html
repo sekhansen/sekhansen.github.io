@@ -98,7 +98,7 @@
   // Highlight research nav link corresponding to the current section of the page in view
   const sections = document.querySelectorAll("div.research-section");
   const config = {
-    rootMargin: "0%"
+    threshold: 0.5
   };
   
   let observer = new IntersectionObserver(function (entries, self) {
@@ -120,53 +120,84 @@
     const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
   
     var mediaQueryString = "(max-width: 600px)";
-    onMobile = window.matchMedia(mediaQueryString).matches;
+    smallWindow = window.matchMedia(mediaQueryString).matches;
   
     if (currentlyActive) {
       currentlyActive.classList.remove("active");
-      if (onMobile) {currentlyActive.style.display = "none";}
+      if (smallWindow) {currentlyActive.style.display = "none";}
     }
     if (shouldBeActive) {
       shouldBeActive.classList.add("active");
-      if (onMobile) {shouldBeActive.style.display = "block";}
+      if (smallWindow) {shouldBeActive.style.display = "block";}
     }
   }
   
-  // Make sure research nav goes back to showing all items when on desktop
+  // Make sure research nav goes back to showing all items when window size increases
   const mql = window.matchMedia("(min-width: 600px)");
   
   mql.onchange = (e) => {
     if (e.matches) {
-      showAllResearchNavItems();;
+      // window wider than 600px
+      onWindowExpand();
+    } else {
+      // window narrower than 600px
+      onWindowContract();
     }
   };
   
-  // Dynamically adjust the top value for research-nav based on the height of main-nav
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var mainNavHeight = document.querySelector(".main-nav").offsetHeight;
-  //   var researchNav = document.querySelector(".research-nav");
-  //   researchNav.style.top = mainNavHeight + 0.5 + "px";
-  // });
-  
   function showAllResearchNavItems() {
-    // alert("hello");
     const items = document.querySelectorAll(".research-nav li");
     for (var i = 0; i < items.length; i++) {
       items[i].style.display = "block";
     }
   }
   
-  function onResearchCaretPress() {
+  function hideAllResearchNavItems() {
     const items = document.querySelectorAll(".research-nav li");
     for (var i = 0; i < items.length; i++) {
-      if (items[i].style.display === "block") {
-        items[i].style.display = "none";
-      } else {
-        items[i].style.display = "block";
-      }
+      items[i].style.display = "none";
     }
-    const currentlyActive = document.querySelector(".research-nav li.active");
-    currentlyActive.style.display = "block";
+  }
+  
+  const upCaret = document.querySelector(".research-nav .fa-caret-up");
+  const downCaret = document.querySelector(".research-nav .fa-caret-down");
+  
+  function expandResearchNav() {
+    var mediaQueryString = "(max-width: 600px)";
+    smallWindow = window.matchMedia(mediaQueryString).matches;
+    if (smallWindow) {
+      showAllResearchNavItems();
+      upCaret.style.display = "block";
+      downCaret.style.display = "none";
+    }
+  }
+  
+  function collapseResearchNav() {
+    var mediaQueryString = "(max-width: 600px)";
+    smallWindow = window.matchMedia(mediaQueryString).matches;
+    if (smallWindow) {
+      hideAllResearchNavItems();
+      const currentlyActive = document.querySelector(".research-nav li.active");
+      currentlyActive.style.display = "block";
+      upCaret.style.display = "none";
+      downCaret.style.display = "block";
+    }
+  }
+  
+  function onResearchLinkClick() {
+    var mediaQueryString = "(max-width: 600px)";
+    smallWindow = window.matchMedia(mediaQueryString).matches;
+    if (smallWindow) {collapseResearchNav();}
+  }
+  
+  function onWindowContract() {
+    collapseResearchNav();
+  }
+  
+  function onWindowExpand() {
+    showAllResearchNavItems();
+    upCaret.style.display = "none";
+    downCaret.style.display = "none";
   }
   
   </script>
