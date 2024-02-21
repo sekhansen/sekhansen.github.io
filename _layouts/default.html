@@ -9,9 +9,11 @@
 	<!-- link to main stylesheet -->
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
   <!-- Add icon library for social media icons in the footer -->
-  <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/fontawesome.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/solid.min.css">
   <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/brands.css">
 </head>
+
 <body>
 	<nav class="main-nav">
 		<ul>
@@ -74,13 +76,14 @@
           } else {
               // expand if currently collapsed
               // add some extra px to avoid border of coloured links being cut off - scrollheight rounds to nearest int
+              // don't add too many extra pixels - this makes the animation go too quickly (as if it's expanding further in the same time)
               panel.style.maxHeight = panel.scrollHeight + 5 + "px";
           }
       }
   }
     
   // Bind expand function to hover (pc) and touch (mobile) events for all papers
-  var papers = document.getElementsByClassName("paper");
+  var papers = document.querySelectorAll(".paper");
   for (var i = 0; i < papers.length; i++) {
       // Mouse events
       papers[i].addEventListener("mouseenter", expandOnHover);
@@ -95,7 +98,7 @@
   // Highlight research nav link corresponding to the current section of the page in view
   const sections = document.querySelectorAll("div.research-section");
   const config = {
-    rootMargin: "-30% 0px -30% 0px"
+    rootMargin: "0%"
   };
   
   let observer = new IntersectionObserver(function (entries, self) {
@@ -116,20 +119,56 @@
     const currentlyActive = document.querySelector(".research-nav li.active");
     const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
   
+    var mediaQueryString = "(max-width: 600px)";
+    onMobile = window.matchMedia(mediaQueryString).matches;
+  
     if (currentlyActive) {
       currentlyActive.classList.remove("active");
+      if (onMobile) {currentlyActive.style.display = "none";}
     }
     if (shouldBeActive) {
       shouldBeActive.classList.add("active");
+      if (onMobile) {shouldBeActive.style.display = "block";}
     }
   }
   
+  // Make sure research nav goes back to showing all items when on desktop
+  const mql = window.matchMedia("(min-width: 600px)");
+  
+  mql.onchange = (e) => {
+    if (e.matches) {
+      showAllResearchNavItems();;
+    }
+  };
+  
   // Dynamically adjust the top value for research-nav based on the height of main-nav
-  document.addEventListener("DOMContentLoaded", function () {
-    var mainNavHeight = document.querySelector(".main-nav").offsetHeight;
-    var researchNav = document.querySelector(".research-nav");
-    researchNav.style.top = mainNavHeight + 0.5 + "px";
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var mainNavHeight = document.querySelector(".main-nav").offsetHeight;
+  //   var researchNav = document.querySelector(".research-nav");
+  //   researchNav.style.top = mainNavHeight + 0.5 + "px";
+  // });
+  
+  function showAllResearchNavItems() {
+    // alert("hello");
+    const items = document.querySelectorAll(".research-nav li");
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = "block";
+    }
+  }
+  
+  function onResearchCaretPress() {
+    const items = document.querySelectorAll(".research-nav li");
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].style.display === "block") {
+        items[i].style.display = "none";
+      } else {
+        items[i].style.display = "block";
+      }
+    }
+    const currentlyActive = document.querySelector(".research-nav li.active");
+    currentlyActive.style.display = "block";
+  }
+  
   </script>
   
   </html>
