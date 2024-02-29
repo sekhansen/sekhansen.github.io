@@ -3,187 +3,170 @@ layout: default
 title: Stephen Hansen - Economics Professor
 ---
 
-<!-- define JavaScript function to expand content of papers -->
-<script>
-    function myFunction(more_id) {
-        var moreText = document.getElementById(more_id);
-        if (moreText.style.display === "none") {
-            moreText.style.display = "block";
-        } 
-        else {
-            moreText.style.display = "none";
-        }
-    }
-</script>
 
-<head>
-    <title>{{ page.title }}</title>
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-</head>
-
-<div class="square">
-<div>
+<div class="bio">
     <h1>Stephen Hansen</h1>
-    <img src="my_photo_web.jpg" alt="Stephen Hansen Photo" style="width:288px;height:241.5px;padding-right:8%;" align="left" float="left">
-</div>
-
-<h3> About Me </h3>
-<p>I am a Professor of Economics at <a href="https://www.ucl.ac.uk/economics/ucl-department-economics" target="_blank" rel="noopener noreferrer">University College London</a>.  My current research uses unstructured data to build new measures of economic activity and behavior across a variety of applications, most often related to organizational economics and monetary policy.  I maintain a <a href="https://github.com/sekhansen" target="_blank" rel="noopener noreferrer">Github page</a> where I share code and lecture slides related to methodologies for the analysis of unstructured and high-dimensional data. I co-organize the monthly <a href="https://sites.google.com/view/amleds/home" target="_blank" rel="noopener noreferrer">AMLEDS</a> webinar that explores economic applications of machine learning.  My research is supported by an ERC Conslidator Grant.</p>
-
+    <img src="my_photo_web.jpg" alt="Stephen Hansen Photo">
+    <h3> About Me </h3>
+    <p>I am a Professor of Economics at <a href="https://www.ucl.ac.uk/economics/ucl-department-economics" target="_blank"
+            rel="noopener noreferrer">University College London</a>. My current research uses unstructured data to build new
+        measures of economic activity and behavior across a variety of applications, most often related to organizational
+        economics and monetary policy. I maintain a <a href="https://github.com/sekhansen" target="_blank"
+            rel="noopener noreferrer">Github page</a> where I share code and lecture slides related to methodologies for the
+        analysis of unstructured and high-dimensional data. I co-organize the monthly <a
+            href="https://sites.google.com/view/amleds/home" target="_blank" rel="noopener noreferrer">AMLEDS</a> webinar
+        that explores economic applications of machine learning. My research is supported by an ERC Conslidator Grant.</p>
 </div>
 
 <div class="blurb">
+
+    <hr>
+
     <h3> Current Working Papers </h3>
 
-    <div id="paper9" onclick="myFunction('p9_dots', 'p9_more')">
-    <div id="paper9">
+    <div class="hover-to-expand-msg">
+        (Hover on a paper to expand. On mobile, tap to expand.)
+    </div>
+
+    <!-- Use '>' on next line to end closing tag of one link right before start of another. Prevents unwanted extra whitespace between links. -->
+
+    <div class="paper" id="paper9">
         <h5> Text Algorithms in Economics </h5>
-        <p>
-            (with Elliott Ash)
-            <br>
-            <button class="gray-button" onclick="myFunction('p9_more')">Summary</button>
-            <a href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button>
+        <div class="authors">
+            with Elliott Ash
+        </div>
+        <div class="summary">
+            <p>Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.</p>
+            <a class="red-link" href="./pdf_files/text_algos_econ.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="green-link" href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
+                GitHub Repository
             </a>
-            <a href="https://github.com/sekhansen/text_algorithms_econ" target="_blank" rel="noopener noreferrer">
-                <button class="green-button">GitHub Repository</button></a>
-            <span id="p9_more" style="display: none;"><br>
-                Review of algorithms for text analysis of economics; introduction of four core measurement problems; discussion of future challenges for text-as-data in economics.
-            </span>
-        </p>
+        </div>
     </div>
 
-    <div id="paper8" onclick="myFunction('p8_dots', 'p8_more')">
-    <div id="paper8">
+    <div class="paper" id="paper8">
         <h5> Short and Variable Lags </h5>
-        <p>
-            (with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva)
-            <br>
-            <button class="gray-button" onclick="myFunction('p8_more')">Summary</button>
-            <a href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button>
+        <div class="authors">
+            with Gergely Buda, Vasco Carvalho, Giancarlo Corsetti, Joao Duarte, Afonso Moura, Alvaro Ortiz, Tomasa Rodrigo, Sevi Rodriguez Mora, and Guilherme Alves da Silva
+        </div>
+        <div class="summary">
+            <p>Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.</p>
+            <a class="red-link" href="./pdf_files/shortvariable_lags.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
+                VoxEU Column
             </a>
-            <a href=https://cepr.org/voxeu/columns/monetary-policy-also-has-short-run-effects target="_blank" rel="noopener noreferrer">
-                <button class="blue-button">VoxEU Column</button></a>
-            <span id="p8_more" style="display: none;"><br>
-                Using novel daily measures of consumption, firm sales, and employment, we show that the economy reacts within days to monetary policy shocks.  Time aggregation of the measures to quarterly frequency masks these short-run dynamics.
-            </span>
-        </p>
+        </div>
     </div>
 
-    <div id="paper7" onclick="myFunction('p7_dots', 'p7_more')">
-    <div id="paper7">
+    <div class="paper" id="paper7">
         <h5> Remote Work across Jobs, Companies, and Space </h5>
-        <p>
-            (with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska)
-            <br>
-            <button class="gray-button" onclick="myFunction('p7_more')">Summary</button>
-            <a href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button>
+        <div class="authors">
+            with Peter Lambert, Nick Bloom, Steven Davis, Raffaella Sadun, and Bledi Taska
+        </div>
+        <div class="summary">
+            <p>We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.</p>
+            <a class="red-link" href="./pdf_files/wham.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
+                VoxEU Column
+            </a
+            ><a class="green-link" href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
+                Website
             </a>
-            <a href=https://cepr.org/voxeu/columns/using-job-postings-quantify-remote-work target="_blank" rel="noopener noreferrer">
-                <button class="blue-button">VoxEU Column</button></a>
-            <a href="https://wfhmap.com/" target="_blank" rel="noopener noreferrer">
-                <button class="green-button">Website</button></a>
-            <span id="p7_more" style="display: none;"><br>
-                We use a large language model trained on tens of thousands of human labels to measure remote and hybrid work adoption with unprecedented granularity. We document large heterogeneity in adoption across narrow occupation categories, cities, and firms.
-            </span>
-        </p>
+        </div>
     </div>
 
-    <div id="paper6" onclick="myFunction('p6_dots', 'p6_more')">
-    <div id="paper6">
+    <div class="paper" id="paper6">
         <h5> Graphical Model Inference With External Network Data </h5>
-        <p>
-            (with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik)
-            <br>
-            <button class="gray-button" onclick="myFunction('p6_more')">Summary</button>
-            <a href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button>
+        <div class="authors">
+            with Jack Jewson, Li Li, Laura Battaglia, David Rossell, and Piotr Zweirnik
+        </div>
+        <div class="summary">
+            <p>We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.</p>
+            <a class="red-link" href="./pdf_files/graphical_model_inference.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="green-link" href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
+                GitHub Repository
             </a>
-            <a href="https://github.com/llaurabat91/graphical-models-external-networks" target="_blank" rel="noopener noreferrer">
-                <button class="green-button">GitHub Repository</button></a>
-            <span id="p6_more" style="display: none;"><br>
-                We show how observed connections among variables in multiple networks can improve estimation of the precision matrix by targeting regularization and develop a Bayesian model for inferring pairwise correlations.
-            </span>
-        </p>
+        </div>
     </div>
 
-    <div id="paper5">
+    <div class="paper" id="paper5">
         <h5> National Accounts in a World of Naturally Occurring Data: A Proof of Concept for Consumption </h5>
-        <p>
-            (with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora)
-            <br>
-            <button class="gray-button" onclick="myFunction('p5_more')">Summary</button>
-            <a href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button></a>
-            <span id="p5_more" style="display: none;"><br>
-                We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. 
-            </span>
-        </p>
+        <div class="authors">
+            with Gergely Buda, Vasco Carvalho, Alvaro Ortiz, Tomasa Rodrigo, and Sevi Rodriguez Mora
+        </div>
+        <div class="summary">
+            <p>We use comprehensive financial transactions from one of Europe's largest banks to build a large-scale consumption survey using national accounting principles. We use this to build aggregate and distributional accounts for consumption, as well as a detailed individual consumption panel. </p>
+            <a class="red-link" href="./pdf_files/consumption_measure.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a>
+        </div>
     </div>
 
-    <div id="paper4">
+    <div class="paper" id="paper4">
         <h5> Policymakers' Uncertainty </h5>
-        <p>
-            (with Anna Cieslak, Michael McMahon, and Song Xiao)
-            <br>
-            <button class="gray-button" onclick="myFunction('p4_more')">Summary</button>
-            <a href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button></a>
-            <span id="p4_more" style="display: none;"><br>
-                We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. 
-            </span>
-        </p>
+        <div class="authors">
+            with Anna Cieslak, Michael McMahon, and Song Xiao
+        </div>
+        <div class="summary">
+            <p>We use the structure of FOMC meetings to measure the uncertainty policymakers face about different macroeconomic conditions, and the associated impact on policy. Uncertainty amplifies the reaction function coefficients, especially for inflation. </p>
+            <a class="red-link" href="./pdf_files/mp_uncertainty.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a>
+        </div>
     </div>
 
-    <div id="paper3">
+    <div class="paper" id="paper3">
         <h5> The Demand for Executive Skills </h5>
-        <p>
-            (with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller)
-            <br>
-            <button class="gray-button" onclick="myFunction('p3_more')">Summary</button>
-            <a href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button></a>
-      <a href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
-        <button class="blue-button">HBR Article</button></a>
-            <span id="p3_more" style="display: none;"><br>
-                We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. 
-            </span>
-        </p>
+        <div class="authors">
+            with Tejas Ramdas, Raffaella Sadun, and Joseph Fuller
+        </div>
+        <div class="summary">
+            <p>We measure the demand for executive skills aross firms using a unique, large-scale corpus of job specifications. The importance of social skills is growing over time and is related to firm size, firm scope, and the information intensity of worker skills. </p>
+            <a class="red-link" href="./pdf_files/c_suite_skill_demand.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="blue-link" href="https://hbr.org/2022/07/the-c-suite-skills-that-matter-most" target="_blank" rel="noopener noreferrer">
+                HBR Article
+            </a>
+        </div>
     </div>
 
-    <div id="paper2">
+    <div class="paper" id="paper2">
         <h5> Hamiltonian Monte Carlo for Regression with High-Dimensional Categorical Data </h5>
-        <p>
-            (with Szymon Sacher and Laura Battaglia)
-            <br>
-            <button class="gray-button" onclick="myFunction('p2_more')">Summary</button>
-            <a href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button></a>
-            <span id="p2_more" style="display: none;"><br>
-                We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data. 
-            </span>
-        </p>
+        <div class="authors">
+            with Szymon Sacher and Laura Battaglia
+        </div>
+        <div class="summary">
+            <p>We show how GPU-accelerated automatic differentation can be used to conduct inference for Bayesian models of text and other discrete data.</p>
+            <a class="red-link" href="./pdf_files/hmc.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a>
+        </div>
     </div>
 
-    <div id="paper1">
+    <div class="paper" id="paper1">
         <h5> Firm-level Risk Exposures and Stock Returns in the Wake of COVID-19 </h5>
-        <p>
-            (with Steven Davis and Cristhian Seminario-Amez)
-            <br>
-            <button class="gray-button" onclick="myFunction('p1_more')">Summary</button>
-            <a href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
-                <button class="red-button">Working Paper</button></a>
-            <a href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
-                <button class="blue-button">VoxEU Column</button></a>
-            <span id="p1_more" style="display: none;"><br>
-                We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. 
-            </span>
-        </p>
+        <div class="authors">
+            with Steven Davis and Cristhian Seminario-Amez
+        </div>
+        <div class="summary">
+            <p>We combine elements of supervised machine learning and dictionary methods to uncover narrow, interpretable risk exposures from 10-K filings that account for firm-level reactions to aggregate shocks. We apply this idea to study equity returns during the COVID-19 pandemic. </p>
+            <a class="red-link" href="./pdf_files/risk_exposures.pdf" target="_blank" rel="noopener noreferrer">
+                Paper
+            </a
+            ><a class="blue-link" href=https://cepr.org/voxeu/columns/firm-level-stock-price-reactions-pandemic-news target="_blank" rel="noopener noreferrer">
+                VoxEU Column
+            </a>
+        </div>
     </div>
 
 </div>
 <!-- /.blurb -->
-

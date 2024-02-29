@@ -1,11 +1,18 @@
+/* design for mobile first, then adjust for desktop after with media query */
+
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* ----------------------------------- */
-/* layout of Home page */
-/* ----------------------------------- */
+.page-content {
+  margin: 6rem auto 2rem auto;
+  width: 95%;
+}
+
+/* ----------------------------------- 
+   layout of Home page 
+   ----------------------------------- */
 
 .column {
     float: left;
@@ -19,149 +26,391 @@ body {
     width: 62%;
   }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    padding-bottom: 5%;
-  }
-
-.square:after {
-    content: "";
-    display: block;
-    padding-bottom: 3%;
-  }
-
-
-/* ----------------------------------- */
-/* Headings, fonts and buttons */
-/* ----------------------------------- */
-nav ul, footer ul {
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+.authors, .publication {
+  /* author names under paper titles */
+  font-size: 0.9rem;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25rem;
+  color: #999;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+.publication {
+  /* review/journal name under paper title and authors */
+  margin-top: 0.3rem;
+  font-style: italic;
 }
+
+.paper {
+  padding: 0.7rem;
+}
+
+.paper.active {
+  outline: 1px solid #999999;
+  outline-offset: -1px; /* compensate for the width of the outline */
+  border-radius: 6px;
+  background-color: #f2f2f2;
+}
+
+.paper h5 {
+  margin-top: 0px;
+}
+
+.blurb h3 {
+  margin-bottom: 0.2rem;
+}
+
+.hover-to-expand-msg {
+  font-size: 0.9rem;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25rem;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.summary {
+  /* shown when cursor hovers on the paper title. Contains description and auxiliary links */
+  font-size: 0.9rem;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.35rem;
+  color: #000000;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.summary p {
+  margin: 0rem;
+  padding: 0.6rem 0rem;
+}
+
+.bio {
+  padding-bottom: 3%;
+  overflow: hidden;
+}
+
+.bio img {
+  width:200px;
+  height:auto;
+  padding:0rem 1.2rem 0rem 0rem;
+  display: block;
+  float: left;
+}
+
+.bio h3 {
+  margin-top: 0rem;
+}
+
+.bio p {
+  margin-top: 0rem;
+}
+
+@media only screen and (min-width: 600px){
+  /* for desktop */
+  .page-content {width: 70%;}
+  .bio img {
+    width:288px;
+  }
+}
+
+
+
+
+/* ----------------------------------- 
+   Headings, fonts and buttons 
+   ----------------------------------- */
+
+.main-nav {
+  position: fixed;
+  background-color: #1c1c1c;
+  left:0;
+  right:0;
+  top: 0;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  padding: 0.8rem 2.5%;
+  margin: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul li {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.main-nav ul li:first-child {
+  color: white;
+  margin-left: 0rem;
+  margin-right: auto;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 a {
-    text-decoration: none;
-    /* color: #999; */
-    color:#C1292E;
+  text-decoration: none;
+  color:#c12929;
 }
+
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 h1 {
-    font-size: 2.6em;
-    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  font-size: 2.2rem;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000000;
 }
 
 h2, h3 {
-    font-size: 1.45em;
+    font-size: 1.5rem;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:#333;
+    color:#000000;
 }
 
 h5 {
-    font-size: 1.25em;
+    font-size: 1.1rem;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #999;
+    color: #000000;
     font-weight:normal;
-    margin-bottom:-15px;
-    /* word-wrap: break-word; */
+    margin-bottom:0.3rem;
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1rem;
     font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.25em;
-    color: #333;
+    line-height: 1.3em;
+    color: #000000;
 }
 
-span {
-    font-size: 0.8em;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.25em;
-    color: #333;
-    /* padding-left: 200px; */
+.research-nav {
+  position: sticky;
+  top: 2.7rem;
+  background-color: white;
+}
+
+.research-nav div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.research-nav div .fa-caret-up {
+  display: none;
+}
+
+.research-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.research-nav ul li {
+  display: none;
+}
+
+.research-nav ul li:first-child {
+  display: block;
+}
+
+.research-nav ul li a {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: black;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.research-nav hr {
+  margin: 0rem;
+}
+
+.research-section {
+  scroll-margin-top: 4.3rem;
+}
+
+#monetary_policy {
+  scroll-margin-top: 5.8rem;
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  border-top: 1px solid #d5d5d5;
 }
 
-ul.posts { 
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  list-style: none;
+  padding: 0rem;
+}
+
+footer ul li a {
+  color: black;
+  font-size: 1.1rem;
+  /* text-align: center; */
+}
+
+footer ul li a i {
+  padding-right: 0.5rem;
+}
+
+#scholar-link-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 600px){
+  /* for desktop */
+
+  .main-nav ul {padding: 0.8rem 15%;}
+  #scholar-link-desktop {display: inline;}
+  #scholar-link-mobile {display: none;}
+
+  .research-nav div {
+    display: block;
+  }
+
+  .research-nav div i {
+    display: none;
+  }
+  
+  .research-nav ul {
+    flex-direction: row;
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+    text-align: center;
+  }
+  
+  .research-nav ul li {
+    flex: 1 0 auto;
+    display: block;
+  }
+
+  .research-nav ul li a {
+    display: block;
+  }
+
+  .research-nav ul li.active{
+    background-color: lightgray;
+  }
+
+  footer ul {
+    padding-left: 15%;
+    justify-content: left;
+  }
+
+  footer ul li {
+    margin-right: 1.6rem;
+  }
+}
+
+/* ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 ul.posts li {
     list-style: none;
+} */
+
+/* .red-button, .green-button, .blue-button {
+  display: inline-block;
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  border: none; 
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .red-button {
-    background-color:#C1292E;
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-bottom: 0cm;
-    margin-top: 0.3cm;
-  }
+  background-color: #C1292E;
+}
+
+.red-button:hover {
+  background-color: #E53E41;
+}
+
+.green-button {
+  background-color: #8CBA80;
+}
+
+.green-button:hover {
+  background-color: #9FC895;
+}
 
 .blue-button {
-    background-color:#715AFF;
-    border: none; 
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+  background-color: #715AFF;
+}
 
-.gray-button {
-    /* background-color:#5F7470; */
-    background-color:#2B303A;
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-bottom: 0cm;
-    margin-top: 0.3cm;
-  }
-
-  .green-button {
-    background-color:#8CBA80;
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-/* span {
-    outline: 2px solid black;
+.blue-button:hover {
+  background-color: #7d6aff;
 } */
 
-/* .container {
-    display: flex;
-  } */
+.red-link, .green-link, .blue-link {
+  border-radius: 4px; 
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-family:"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-right: 0.7rem;
+  transition: background-color 0.3s ease;
+}
+
+.red-link {
+  outline: 1px solid #C1292E;
+  outline-offset: -1px;
+  color: #C1292E;
+}
+
+.red-link:hover {
+  text-decoration: none;
+  background-color: #C1292E;
+  color: white;
+}
+
+.green-link {
+  outline: 1px solid #8CBA80;
+  outline-offset: -1px;
+  color: #8CBA80;
+}
+
+.green-link:hover {
+  text-decoration: none;
+  background-color: #8CBA80;
+  color: white;
+}
+
+.blue-link {
+  outline: 1px solid #715AFF;
+  outline-offset: -1px;
+  color: #715AFF;
+}
+
+.blue-link:hover {
+  text-decoration: none;
+  background-color: #715AFF;
+  color: white;
+}
