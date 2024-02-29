@@ -91,7 +91,7 @@ body {
 .bio img {
   width:200px;
   height:auto;
-  padding:0rem 1.2rem 1.2rem 0rem;
+  padding:0rem 1.2rem 0rem 0rem;
   display: block;
   float: left;
 }
