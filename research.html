@@ -19,7 +19,6 @@ title: Stephen Hansen - Research
   <hr>
 </nav>
 
-<!-- <br> -->
 
 <!-- Put '>' on next line to end closing tag of one link right before start of another. Prevents unwanted extra whitespace between links. -->
 
@@ -408,7 +407,7 @@ title: Stephen Hansen - Research
     // Current scroll position
     const scrollY = window.pageYOffset;
     // scrolled to (or near enough to) bottom of page?
-    const atBottomOfPage = ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 100);
+    const atBottomOfPage = ((window.innerHeight + scrollY) > document.body.offsetHeight - 100);
     
     if (researchNavExpanded && onMobile) {
       // don't do anything if the nav is expanded - should show all elements and not highlight anything
@@ -416,17 +415,19 @@ title: Stephen Hansen - Research
     }
 
     if (atBottomOfPage) {
+      
       // at bottom of page, so bottom-most section in view. highlight link corresponding to last section.
       const lastSection = sections[sections.length - 1];
       const sectionId = lastSection.getAttribute("id");
       const lastLink = document.querySelector(".research-nav li[data-ref=" + sectionId + "]");
       const alreadyActive = (lastLink === activeLink);
       if (!alreadyActive){
+        // alert();
         // at bottom of page, bottom-most section's link not active
         lastLink.classList.add("active");
         activeLink.classList.remove("active");
         if (onMobile) {
-          currentLink.style.display = "block";
+          lastLink.style.display = "block";
           activeLink.style.display = "none";
         }
       }
