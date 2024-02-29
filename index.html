@@ -4,18 +4,59 @@ title: Stephen Hansen - Economics Professor
 ---
 
 
-<div class="square">
-<div>
+
+
+<!--  REMOVE BELOW -->
+
+<!DOCTYPE html>
+<html>
+
+<!-- Display the site properly on mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<title>{{ page.title }}</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+  <!-- Add icon library for social media icons in the footer -->
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/solid.min.css">
+  <link rel="stylesheet" type="text/css" href="./fontawesome-free-6.5.1-web/css/brands.css">
+</head>
+
+<body>
+	<nav class="main-nav">
+		<ul>
+			<li><a href="./index.html">Stephen Hansen</a></li>
+			<li><a href="./research.html">Research</a></li>
+			<li><a href="./pdf_files/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+		</ul>
+	</nav>
+
+	<div class="page-content">
+
+<!-- REMOVE ABOVE -->
+
+
+
+
+<div class="bio">
     <h1>Stephen Hansen</h1>
     <img src="my_photo_web.jpg" alt="Stephen Hansen Photo">
-</div>
-<h3> About Me </h3>
-<p>
-    I am a Professor of Economics at <a href="https://www.ucl.ac.uk/economics/ucl-department-economics" target="_blank" rel="noopener noreferrer">University College London</a>.  My current research uses unstructured data to build new measures of economic activity and behavior across a variety of applications, most often related to organizational economics and monetary policy.  I maintain a <a href="https://github.com/sekhansen" target="_blank" rel="noopener noreferrer">Github page</a> where I share code and lecture slides related to methodologies for the analysis of unstructured and high-dimensional data. I co-organize the monthly <a href="https://sites.google.com/view/amleds/home" target="_blank" rel="noopener noreferrer">AMLEDS</a> webinar that explores economic applications of machine learning.  My research is supported by an ERC Conslidator Grant.
-</p>
+    <h3> About Me </h3>
+    <p>I am a Professor of Economics at <a href="https://www.ucl.ac.uk/economics/ucl-department-economics" target="_blank"
+            rel="noopener noreferrer">University College London</a>. My current research uses unstructured data to build new
+        measures of economic activity and behavior across a variety of applications, most often related to organizational
+        economics and monetary policy. I maintain a <a href="https://github.com/sekhansen" target="_blank"
+            rel="noopener noreferrer">Github page</a> where I share code and lecture slides related to methodologies for the
+        analysis of unstructured and high-dimensional data. I co-organize the monthly <a
+            href="https://sites.google.com/view/amleds/home" target="_blank" rel="noopener noreferrer">AMLEDS</a> webinar
+        that explores economic applications of machine learning. My research is supported by an ERC Conslidator Grant.</p>
 </div>
 
 <div class="blurb">
+
+    <hr>
 
     <h3> Current Working Papers </h3>
 
@@ -165,3 +206,151 @@ title: Stephen Hansen - Economics Professor
 
 </div>
 <!-- /.blurb -->
+
+
+
+
+<!-- REMOVE BELOW -->
+
+</div><!-- /.container -->
+	
+<footer>
+<ul>
+    <li><a href="https://github.com/sekhansen" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Github</a></li>
+    <li id="scholar-link-desktop"><a href="https://scholar.google.co.uk/citations?user=mXiyl7YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a></li>
+    <li id="scholar-link-mobile"><a href="https://scholar.google.co.uk/citations?user=mXiyl7YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i>Scholar</a></li>
+    <li><a href="https://twitter.com/StephenEKHansen" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+</ul>
+</footer>
+</body>
+
+<script>
+// When mouse hovers on a paper title, expand
+  
+function handleTouchStart(event) {
+      // Store coords when a touch starts
+      this.startX = event.touches[0].clientX;
+      this.startY = event.touches[0].clientY;
+      this.isTap = true;
+  }
+  
+function handleTouchMove(event) {
+    // Distance moved during touch
+    var dx = event.touches[0].clientX-this.startX;
+    var dy = event.touches[0].clientY-this.startY;
+    var dist = dx**2+dy**2;
+    // If touch moves significantly, consider it a scroll
+    if (dist > 100) {
+        this.isTap = false;
+    }
+}
+  
+function expandOnHover(event){
+    // Don't handle click events on links
+    if (event.target.tagName === "A"){
+        return true;
+    }
+
+    // Only expand if it was a tap (on mobile) or mouse click
+    if (this.isTap || typeof this.isTap === 'undefined') {
+        event.preventDefault();
+        // Expand to show description, links etc. on hover
+        this.classList.toggle("active");
+        var panel = this.querySelector(".summary");
+        if (panel.style.maxHeight) {
+            // collapse if already expanded
+            panel.style.maxHeight = null;
+        } else {
+            // expand if currently collapsed
+            // add some extra px to avoid border of coloured links being cut off - scrollheight rounds to nearest int
+            // don't add too many extra pixels - this makes the animation go too quickly (as if it's expanding further in the same time)
+            panel.style.maxHeight = panel.scrollHeight + 5 + "px";
+        }
+    }
+}
+  
+// Bind expand function to hover (pc) and touch (mobile) events for all papers
+var papers = document.querySelectorAll(".paper");
+for (var i = 0; i < papers.length; i++) {
+    // Mouse events
+    papers[i].addEventListener("mouseenter", expandOnHover);
+    papers[i].addEventListener("mouseleave", expandOnHover);
+    // Touchscreen events
+    papers[i].addEventListener("touchstart", handleTouchStart);
+    papers[i].addEventListener("touchmove", handleTouchMove);
+    papers[i].addEventListener("touchend", expandOnHover);
+}
+
+
+// Highlight research nav link corresponding to the current section of the page in view
+const sections = document.querySelectorAll("div.research-section");
+const config = {
+  rootMargin: "0%"
+};
+
+let observer = new IntersectionObserver(function (entries, self) {
+  entries.forEach(entry => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      intersectionHandler(entry); 
+    }
+  });
+}, config);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+function intersectionHandler(entry) {
+  const id = entry.target.id;
+  const currentlyActive = document.querySelector(".research-nav li.active");
+  const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
+
+  var mediaQueryString = "(max-width: 600px)";
+  onMobile = window.matchMedia(mediaQueryString).matches;
+
+  if (currentlyActive) {
+    currentlyActive.classList.remove("active");
+    if (onMobile) {currentlyActive.style.display = "none";}
+  }
+  if (shouldBeActive) {
+    shouldBeActive.classList.add("active");
+    if (onMobile) {shouldBeActive.style.display = "block";}
+  }
+}
+
+// Make sure research nav goes back to showing all items when on desktop
+const mql = window.matchMedia("(min-width: 600px)");
+
+mql.onchange = (e) => {
+  if (e.matches) {
+    showAllResearchNavItems();;
+  }
+};
+
+function showAllResearchNavItems() {
+  // alert("hello");
+  const items = document.querySelectorAll(".research-nav li");
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.display = "block";
+  }
+}
+
+function onResearchCaretPress() {
+  const items = document.querySelectorAll(".research-nav li");
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].style.display === "block") {
+      items[i].style.display = "none";
+    } else {
+      items[i].style.display = "block";
+    }
+  }
+  const currentlyActive = document.querySelector(".research-nav li.active");
+  currentlyActive.style.display = "block";
+}
+
+</script>
+
+</html>
+
+<!-- REMOVE ABOVE -->
