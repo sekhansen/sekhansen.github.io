@@ -38,6 +38,7 @@
   </body>
   
   <script>
+  
   // When mouse hovers on a paper title, expand
     
   function handleTouchStart(event) {
@@ -82,7 +83,9 @@
       }
   }
     
+  
   // Bind expand function to hover (pc) and touch (mobile) events for all papers
+  
   var papers = document.querySelectorAll(".paper");
   for (var i = 0; i < papers.length; i++) {
       // Mouse events
@@ -96,45 +99,69 @@
   
   
   // Highlight research nav link corresponding to the current section of the page in view
+  
   const sections = document.querySelectorAll("div.research-section");
-  const config = {
-    threshold: 0.5
-  };
   
-  let observer = new IntersectionObserver(function (entries, self) {
-    entries.forEach(entry => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-        intersectionHandler(entry); 
+  function navHighlighter() {
+    const mediaQueryString = "(max-width: 600px)";
+    const onMobile = window.matchMedia(mediaQueryString).matches;
+    const activeLink = document.querySelector(".research-nav li.active");
+    // scrolled to bottom of page?
+    const atBottomOfPage = (window.innerHeight + Math.round(window.scrollY) ) >= document.body.offsetHeight;
+    // Get current scroll position
+    const scrollY = window.pageYOffset;
+    
+    if (researchNavExpanded && onMobile) {
+      // don't do anything if the nav is expanded - should show all elements and not highlight anything
+      return;
+    }
+  
+    if (atBottomOfPage) {
+      // at bottom of page, so bottom-most section in view. highlight link corresponding to last section.
+      const lastSection = sections[sections.length - 1];
+      const sectionId = lastSection.getAttribute("id");
+      const lastLink = document.querySelector(".research-nav li[data-ref=" + sectionId + "]");
+      lastLink.classList.add("active");
+      activeLink.classList.remove("active");
+      if (onMobile) {
+        currentLink.style.display = "block";
+        activeLink.style.display = "none";
       }
-    });
-  }, config);
-  
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-  
-  function intersectionHandler(entry) {
-    const id = entry.target.id;
-    const currentlyActive = document.querySelector(".research-nav li.active");
-    const shouldBeActive = document.querySelector(".research-nav li[data-ref=" + id + "]");
-  
-    var mediaQueryString = "(max-width: 600px)";
-    smallWindow = window.matchMedia(mediaQueryString).matches;
-  
-    if (currentlyActive) {
-      currentlyActive.classList.remove("active");
-      if (smallWindow) {currentlyActive.style.display = "none";}
+      return;
     }
-    if (shouldBeActive) {
-      shouldBeActive.classList.add("active");
-      if (smallWindow) {shouldBeActive.style.display = "block";}
-    }
+  
+    // alert()
+    
+    for (var i = 0; i < sections.length; i++){
+      const current = sections[i];
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100;
+      const sectionId = current.getAttribute("id");
+          
+      // the nav link for current section
+      const currentLink = document.querySelector(".research-nav li[data-ref=" + sectionId + "]");
+      // scroll position in current section?
+      const scrollInSection = (scrollY > sectionTop) && (scrollY <= (sectionTop + sectionHeight) );
+      // link already active?
+      const alreadyActive = (currentLink === activeLink);
+      
+  
+      if (scrollInSection && !alreadyActive){
+        currentLink.classList.add("active");
+        activeLink.classList.remove("active");
+        if (onMobile) {
+          currentLink.style.display = "block";
+          activeLink.style.display = "none";
+        }
+        // have found the section scrolled to, so can stop iterating through sections
+        break;
+      }
+    };
   }
   
   // Make sure research nav goes back to showing all items when window size increases
   const mql = window.matchMedia("(min-width: 600px)");
-  
+    
   mql.onchange = (e) => {
     if (e.matches) {
       // window wider than 600px
@@ -144,6 +171,11 @@
       onWindowContract();
     }
   };
+  
+  
+  // Handle carets to collapse and expand research nav
+  
+  var researchNavExpanded = false;
   
   function showAllResearchNavItems() {
     const items = document.querySelectorAll(".research-nav li");
@@ -157,6 +189,7 @@
     for (var i = 0; i < items.length; i++) {
       items[i].style.display = "none";
     }
+    researchNavExpanded = false;
   }
   
   const upCaret = document.querySelector(".research-nav .fa-caret-up");
@@ -169,6 +202,7 @@
       showAllResearchNavItems();
       upCaret.style.display = "block";
       downCaret.style.display = "none";
+      researchNavExpanded = true;
     }
   }
   
@@ -181,6 +215,7 @@
       currentlyActive.style.display = "block";
       upCaret.style.display = "none";
       downCaret.style.display = "block";
+      researchNavExpanded = false;
     }
   }
   
@@ -192,6 +227,7 @@
   
   function onWindowContract() {
     collapseResearchNav();
+    downCaret.style.display = "block";
   }
   
   function onWindowExpand() {
