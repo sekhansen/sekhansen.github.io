@@ -398,6 +398,7 @@ title: Stephen Hansen - Research
 
 <script>
   var researchLinkWasClicked = false;
+  var researchNavWasCollapsed = false;
 
   // Highlight research nav link corresponding to the current section of the page in view
 
@@ -411,7 +412,13 @@ title: Stephen Hansen - Research
       researchLinkWasClicked = false;
       return;
     }
-    
+    if (researchNavWasCollapsed) {
+      // don't do anything if the scroll event is due to a link in the research nav being clicked - this highlighting will
+      // be handled by the onclick handler
+      researchNavWasCollapsed = false;
+      return;
+    }
+
     const mediaQueryString = "(max-width: 600px)";
     const onMobile = window.matchMedia(mediaQueryString).matches;
 
@@ -526,6 +533,7 @@ title: Stephen Hansen - Research
   }
 
   function collapseResearchNav() {
+    researchNavWasCollapsed = true;
     var mediaQueryString = "(max-width: 600px)";
     smallWindow = window.matchMedia(mediaQueryString).matches;
     if (smallWindow) {
@@ -574,4 +582,3 @@ title: Stephen Hansen - Research
   }
 
 </script>
-
