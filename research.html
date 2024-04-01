@@ -7,11 +7,11 @@ title: Stephen Hansen - Research
 <nav class="research-nav">
   <div>
     <ul>
-      <li onclick="onResearchLinkClick()" class="active" data-ref="monetary_policy"><a href="#monetary_policy">Monetary Policy</a></li
-      ><li onclick="onResearchLinkClick()" data-ref="io"><a href="#io">Org Econ/Firms</a></li
-      ><li onclick="onResearchLinkClick()" data-ref="econ_measurement"><a href="#econ_measurement">Consumption</a></li
-      ><li onclick="onResearchLinkClick()" data-ref="stats"><a href="#stats">Econometrics</a></li
-      ><li onclick="onResearchLinkClick()" data-ref="review"><a href="#review">Reviews</a></li>
+      <li onclick="onResearchLinkClick(this)" class="active" data-ref="monetary_policy"><a href="#monetary_policy">Monetary Policy</a></li
+      ><li onclick="onResearchLinkClick(this)" data-ref="io"><a href="#io">Org Econ/Firms</a></li
+      ><li onclick="onResearchLinkClick(this)" data-ref="econ_measurement"><a href="#econ_measurement">Consumption</a></li
+      ><li onclick="onResearchLinkClick(this)" data-ref="stats"><a href="#stats">Econometrics</a></li
+      ><li onclick="onResearchLinkClick(this)" data-ref="review"><a href="#review">Reviews</a></li>
     </ul> 
     <i class="fas fa-caret-down" onclick="expandResearchNav()"></i>
     <i class="fas fa-caret-up" onclick="collapseResearchNav()"></i>
@@ -397,6 +397,8 @@ title: Stephen Hansen - Research
 
 
 <script>
+  var researchLinkWasClicked = false;
+
   // Highlight research nav link corresponding to the current section of the page in view
 
   const sections = document.querySelectorAll("div.research-section");
@@ -405,18 +407,25 @@ title: Stephen Hansen - Research
   function navHighlighter() {
     const mediaQueryString = "(max-width: 600px)";
     const onMobile = window.matchMedia(mediaQueryString).matches;
+
+    if (researchNavExpanded && onMobile) {
+      // don't do anything if the nav is expanded - should show all elements and not highlight anything
+      return;
+    }
+
+    if (researchLinkWasClicked) {
+      // don't do anything if the scroll event is due to a link in the research nav being clicked - this highlighting will
+      // be handled by the onclick handler
+      researchLinkWasClicked = false;
+      return;
+    }
+
     const activeLink = document.querySelector(".research-nav li.active");
     // Current scroll position
     const scrollY = window.pageYOffset;
     // scrolled to (or near enough to) bottom of page?
     const bottomOfPageTolerance = 3;
     const atBottomOfPage = ((window.innerHeight + scrollY) >= document.documentElement.scrollHeight - bottomOfPageTolerance);
-    // alert(document.body.offsetHeight);
-    // alert(document.body.scrollHeight);
-    if (researchNavExpanded && onMobile) {
-      // don't do anything if the nav is expanded - should show all elements and not highlight anything
-      return;
-    }
 
     if (atBottomOfPage) {
       // alert("at the bottom of page");
@@ -529,15 +538,30 @@ title: Stephen Hansen - Research
     }
   }
 
-  function onResearchLinkClick() {
+  function onResearchLinkClick(e) {
+    // so the scroll event handler doesn't react
+    researchLinkWasClicked = true;
+
     var mediaQueryString = "(max-width: 600px)";
-    smallWindow = window.matchMedia(mediaQueryString).matches;
-    if (smallWindow) {
-      // only do this when showing menu in mobile mode
+    onMobile = window.matchMedia(mediaQueryString).matches;
+    activeLink = document.querySelector(".research-nav li.active");
+    if (onMobile) {
+      // in mobile mode
+
       // clicking on a link should collapse the menu if expanded
-      if (researchNavExpanded) collapseResearchNav();
+      if (researchNavExpanded) {
+        collapseResearchNav();
+        // make sure link clicked visible
+        activeLink.style.display = "none";
+        e.style.display = "block";
+      }
       // clicking on the active link should expand the menu
       else expandResearchNav();
+    }
+    else {
+      // in desktop mode - highlight the nav link
+      activeLink.classList.remove("active");
+      e.classList.add("active");
     }
   }
 
@@ -553,3 +577,4 @@ title: Stephen Hansen - Research
   }
 
 </script>
+
