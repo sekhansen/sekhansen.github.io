@@ -551,18 +551,15 @@ title: Stephen Hansen - Research
       // clicking on a link should collapse the menu if expanded
       if (researchNavExpanded) {
         collapseResearchNav();
-        // make sure link clicked visible
+        // make sure link clicked is visible
         activeLink.style.display = "none";
         e.style.display = "block";
       }
       // clicking on the active link should expand the menu
       else expandResearchNav();
     }
-    else {
-      // in desktop mode - highlight the nav link
-      activeLink.classList.remove("active");
-      e.classList.add("active");
-    }
+    activeLink.classList.remove("active");
+    e.classList.add("active");
   }
 
   function onWindowContract() {
