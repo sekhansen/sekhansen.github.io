@@ -243,10 +243,16 @@ p {
 
 .research-section {
   scroll-margin-top: 4.3rem;
+  padding-bottom: 1.2rem;
 }
 
-#monetary_policy {
-  scroll-margin-top: 5.8rem;
+.research-section h2 {
+  margin: 0rem;
+  padding: 1.2rem 0rem;
+}
+
+.research-section hr {
+  margin: 0rem;
 }
 
 footer {

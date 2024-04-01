@@ -442,7 +442,7 @@ title: Stephen Hansen - Research
       const sectionHeight = current.offsetHeight;
       mainNavHeight = document.querySelector(".main-nav").offsetHeight;
       researchNavHeight = document.querySelector(".research-nav").offsetHeight;
-      const sectionTop = current.offsetTop - mainNavHeight - researchNavHeight;
+      const sectionTop = current.offsetTop - (mainNavHeight + researchNavHeight);
       const sectionId = current.getAttribute("id");
           
       // the nav link for current section
