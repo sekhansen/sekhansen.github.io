@@ -409,8 +409,8 @@ title: Stephen Hansen - Research
     // Current scroll position
     const scrollY = window.pageYOffset;
     // scrolled to (or near enough to) bottom of page?
-    const bottomOfPageTolerance = 5;
-    const atBottomOfPage = ((window.innerHeight + scrollY) > document.body.scrollHeight - bottomOfPageTolerance);
+    const bottomOfPageTolerance = 3;
+    const atBottomOfPage = ((window.innerHeight + scrollY) >= document.documentElement.scrollHeight - bottomOfPageTolerance);
     // alert(document.body.offsetHeight);
     // alert(document.body.scrollHeight);
     if (researchNavExpanded && onMobile) {
@@ -553,5 +553,3 @@ title: Stephen Hansen - Research
   }
 
 </script>
-
-
