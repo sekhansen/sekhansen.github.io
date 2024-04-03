@@ -6,7 +6,7 @@ body {
 }
 
 .page-content {
-  margin: 6rem auto 2rem auto;
+  margin: 6rem auto 0rem auto;
   width: 95%;
 }
 
@@ -243,10 +243,16 @@ p {
 
 .research-section {
   scroll-margin-top: 4.3rem;
+  padding-bottom: 2rem;
 }
 
-#monetary_policy {
-  scroll-margin-top: 5.8rem;
+.research-section h2 {
+  margin: 0rem;
+  padding: 2rem 0rem 1rem;
+}
+
+.research-section hr {
+  margin: 0rem;
 }
 
 footer {
