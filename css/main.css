@@ -104,6 +104,22 @@ body {
   margin-top: 0rem;
 }
 
+.contact-note {
+  background-color: #f7f1f1;
+  border-left: 4px solid #c12929;
+  padding: 0.75rem 1.1rem;
+  margin: 0rem 0rem 3% 0rem;
+  border-radius: 3px;
+}
+
+.contact-note p {
+  margin: 0.4rem 0rem;
+}
+
+.contact-note strong {
+  color: #c12929;
+}
+
 @media only screen and (min-width: 600px){
   /* for desktop */
   .page-content {width: 70%;}
